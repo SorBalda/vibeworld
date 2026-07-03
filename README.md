@@ -1,6 +1,6 @@
-# VibeCity
+# VibeWorld
 
-> A cyberpunk MMO that runs in the terminal you already live in.
+> A cyberpunk social space that runs in the terminal you already live in.
 > A neon planet of ten sciences, for developers *and* scientists: meet
 > people from fields that never share a corridor, keep each other
 > company at 2am while the code misbehaves — and when your AI agent
@@ -15,36 +15,36 @@ One command. One binary. Zero dependencies — voice chat included, and
 there is *nothing else to install*: the audio codec is pure Go.
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/SorBalda/vibecity/main/install.sh | sh
-vibecity
+curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh
+vibeworld
 ```
 
 The script detects your OS/arch, verifies the SHA256, and drops a single
-binary in `~/.local/bin`. Windows: grab `vibecity-windows-amd64.exe` from
-the [Releases page](https://github.com/SorBalda/vibecity/releases).
+binary in `~/.local/bin`. Windows: grab `vibeworld-windows-amd64.exe` from
+the [Releases page](https://github.com/SorBalda/vibeworld/releases).
 
 The public server is built in: **`wss://vibecity-andrea.fly.dev/ws`**,
 200 seats. It sleeps when nobody's around and wakes on the first
 connection — if your login takes a second, that's a server literally
 waking up because you arrived.
 
-No account needed. `vibecity --anon` if you'd rather be nobody.
+No account needed. `vibeworld --anon` if you'd rather be nobody.
 
 ## Update
 
 Same command as installing — the script always fetches the latest release:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/SorBalda/vibecity/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh
 ```
 
-Windows: grab the newest `vibecity-windows-amd64.exe` from the
-[Releases page](https://github.com/SorBalda/vibecity/releases).
+Windows: grab the newest `vibeworld-windows-amd64.exe` from the
+[Releases page](https://github.com/SorBalda/vibeworld/releases).
 
-You don't need to check by hand: when a new version is out, the game
+You don't need to check by hand: when a new version is out, vibeworld
 shows a `▲ update available` line at login with the exact command to
-run. `vibecity --version` prints what you're running. To stay in the
-loop, watch the [Releases page](https://github.com/SorBalda/vibecity/releases)
+run. `vibeworld --version` prints what you're running. To stay in the
+loop, watch the [Releases page](https://github.com/SorBalda/vibeworld/releases)
 (GitHub → Watch → Custom → Releases).
 
 ## A planet of ten sciences
@@ -162,8 +162,8 @@ kept it. You would have too.)
 | `ctrl+n` | lo-fi classical, on the moon |
 | `]` | social sidebar (`e` avatar studio · `d` DM) |
 | `:` | command console (planet/region) |
-| `?` | every key, in-game |
-| `q` / `ctrl+C` | quit (the flare, sadly, works only in-game) |
+| `?` | every key, in-world |
+| `q` / `ctrl+C` | quit (the flare, sadly, works only in-world) |
 
 ## House rules
 
@@ -174,11 +174,11 @@ kept it. You would have too.)
 
 ## For developers
 
-`vibecity --offline` runs a full self-contained world with no server.
+`vibeworld --offline` runs a full self-contained world with no server.
 Modding starts at [`mod-sdk/`](mod-sdk/) (Apache-2.0): declarative
 worldpacks — data, not code.
 
-**The client source will be opened soon.** Right now VibeCity ships as
+**The client source will be opened soon.** Right now VibeWorld ships as
 binaries + the Mod SDK while we harden the launch; the plan is to publish
 the client under **PolyForm Perimeter 1.0.0** (read it, mod it, build it —
 just don't ship a competing clone) once the dust settles. Watch the repo.

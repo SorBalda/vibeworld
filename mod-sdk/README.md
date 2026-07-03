@@ -1,8 +1,8 @@
-# VibeCity Mod SDK
+# VibeWorld Mod SDK
 
-Copyright 2026 Andrea Baldanza (the VibeCity project).
+Copyright 2026 Andrea Baldanza (the VibeWorld project).
 
-This directory is the home of the public VibeCity Mod SDK: the schemas,
+This directory is the home of the public VibeWorld Mod SDK: the schemas,
 host-API headers, example mod-packs, and any code explicitly published for
 third parties to build and share mods against. Everything in this directory
 is licensed under the **Apache License 2.0** (see [`LICENSE`](LICENSE)) —
@@ -16,4 +16,4 @@ the Apache-2.0 license here applies only to material that is later explicitly
 published as the Mod SDK.
 
 Mods you write against the SDK are your own work: a mod is data validated
-against Apache-licensed schemas, not a derivative of the VibeCity core.
+against Apache-licensed schemas, not a derivative of the VibeWorld core.

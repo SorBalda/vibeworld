@@ -1,23 +1,23 @@
-VibeCity — License
+VibeWorld — License
 
-Copyright 2026 Andrea Baldanza (the VibeCity project).
+Copyright 2026 Andrea Baldanza (the VibeWorld project).
 
 ===============================================================================
-Scope (read this first) — which parts of VibeCity are under which terms
+Scope (read this first) — which parts of VibeWorld are under which terms
 ===============================================================================
 
-VibeCity is developed in a single Git repository, but not every part of it is
+VibeWorld is developed in a single Git repository, but not every part of it is
 offered to the public under the same terms. There are three tiers:
 
   1. CLIENT — PolyForm Perimeter 1.0.0 (the license text below).
      This is the DEFAULT tier: it covers everything in this repository —
      source code, documentation, artwork — EXCEPT the directories expressly
      listed under tiers 2 and 3. In particular it covers the client and
-     headless-renderer entry points (cmd/vibecity, cmd/snapshot) and every
+     headless-renderer entry points (cmd/vibeworld, cmd/snapshot) and every
      internal/* package other than internal/server.
 
   2. SERVER — proprietary, NOT LICENSED to anyone:
-       - cmd/vibecityd        (server entry point)
+       - cmd/vibeworldd        (server entry point)
        - internal/server      (authoritative presence / chat / voice hub)
      The authoritative multiplayer server is never intended to be published.
      Although it may be physically present in the private development
@@ -29,17 +29,17 @@ offered to the public under the same terms. There are three tiers:
 
   3. MOD SDK — Apache License 2.0 (see mod-sdk/LICENSE):
      the schemas, example mod-packs, and any material expressly published as
-     the VibeCity Mod SDK. Until the SDK is carved out into mod-sdk/, the
+     the VibeWorld Mod SDK. Until the SDK is carved out into mod-sdk/, the
      declarative mod-pack loader (internal/modpack) remains part of the
      client tier under PolyForm Perimeter.
 
-No license in this repository grants any rights to the "VibeCity" name or
+No license in this repository grants any rights to the "VibeWorld" name or
 logo; see TRADEMARK.md.
 
 The license below therefore applies to the client tier only.
 
-Required Notice: Copyright 2026 Andrea Baldanza — VibeCity
-(https://github.com/SorBalda/vibecity)
+Required Notice: Copyright 2026 Andrea Baldanza — VibeWorld
+(https://github.com/SorBalda/vibeworld)
 
 ===============================================================================
 PolyForm Perimeter License 1.0.0  (applies to the client, as scoped above)

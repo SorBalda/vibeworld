@@ -1,2 +1,13 @@
-dist/
-*.log
+# Compiled binaries
+/vibeworld
+/vibeworldd
+/snapshot
+/dist/
+/deploy/
+
+# Go build/test artifacts
+*.test
+*.out
+
+# Generated previews
+*.ansi
