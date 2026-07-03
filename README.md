@@ -28,6 +28,23 @@ waking up because you arrived.
 
 No account needed. `vibecity --anon` if you'd rather be nobody.
 
+## Update
+
+Same command as installing — the script always fetches the latest release:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/SorBalda/vibecity/main/install.sh | sh
+```
+
+Windows: grab the newest `vibecity-windows-amd64.exe` from the
+[Releases page](https://github.com/SorBalda/vibecity/releases).
+
+You don't need to check by hand: when a new version is out, the game
+shows a `▲ update available` line at login with the exact command to
+run. `vibecity --version` prints what you're running. To stay in the
+loop, watch the [Releases page](https://github.com/SorBalda/vibecity/releases)
+(GitHub → Watch → Custom → Releases).
+
 ## A planet of ten sciences
 
 Continents are disciplines. Artificial Intelligence is a landmass.
