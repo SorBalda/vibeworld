@@ -1,10 +1,10 @@
 # VibeWorld
 
-> Meet other developers and scientists in a shared cyberpunk world that
-> lives entirely inside your terminal. A neon planet of ten sciences: keep
-> each other company at 2am while the code misbehaves — and when your AI
-> agent "fixes" the failing test by deleting it, take a rocket to the moon
-> and scream.
+> A cyberpunk social space that runs entirely in your terminal where
+> developers and scientists meet in a shared persistent world. A neon
+> planet of ten sciences: keep each other company at 2am while the code
+> misbehaves — and when your AI agent "fixes" the failing test by
+> deleting it, take a rocket to the moon and scream.
 
 ![Terra and Luna, seen from space](docs/screenshots/space.png)
 
@@ -53,7 +53,7 @@ loop, watch the [Releases page](https://github.com/SorBalda/vibeworld/releases)
 Continents are disciplines. Artificial Intelligence is a landmass.
 Engineering is another. You orbit, you pick, you descend.
 
-![The globe, deep-zoomed on Neuralis](docs/screenshots/globe.png)
+![The globe turning as you scroll through regions](docs/screenshots/planet-rotate.gif)
 
 ## Cities are street graphs
 
@@ -100,7 +100,7 @@ ribbon with a countdown goes up over the junction for everyone in the
 city to see. It is the most honest incident-management tool we have
 ever shipped.
 
-![A HELP beacon, seen by another player](docs/screenshots/help-flare.png)
+![A HELP beacon, seen by another player](docs/screenshots/help-flare.gif)
 
 ## The moon is for screaming
 
@@ -113,7 +113,7 @@ orbit.
 
 Your scream joins the wall, under `▼ LAST SCREAM HEARD FROM SPACE`:
 
-![The last scream heard from space](docs/screenshots/moon-scream.png)
+![The last scream heard from space](docs/screenshots/moon-scream.gif)
 
 And here's the thing: *everyone sees it.* Anyone looking at the sky
 from anywhere on the planet gets your words next to the moon.
@@ -129,7 +129,7 @@ with whoever's there and watch comets, the Earth passing overhead, and
 occasionally something that is *no moon*. Press `ctrl+n` for lo-fi
 classical — Beethoven, at a sensible volume, on the actual moon.
 
-![Watching the sky together](docs/screenshots/stargazing.png)
+![Watching the sky together](docs/screenshots/stargazing.gif)
 
 The **Contemplation Dome** next door is a music-only sanctuary. No
 voice, no noise. Some places should stay like that.
