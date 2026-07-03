@@ -1,7 +1,9 @@
 # VibeCity
 
 > A cyberpunk MMO that runs in the terminal you already live in.
-> Walk a neon planet, meet other developers — and when your AI agent
+> A neon planet of ten sciences, for developers *and* scientists: meet
+> people from fields that never share a corridor, keep each other
+> company at 2am while the code misbehaves — and when your AI agent
 > "fixes" the failing test by deleting it, take a rocket to the moon
 > and scream.
 
