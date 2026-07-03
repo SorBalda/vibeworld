@@ -24,10 +24,11 @@ the [Releases page](https://github.com/SorBalda/vibeworld/releases).
 Linux and Apple Silicon (M-series) Macs are supported today; **Intel Mac
 support is coming soon**.
 
-The public server is built in: **`wss://vibecity-andrea.fly.dev/ws`**,
-200 seats. It sleeps when nobody's around and wakes on the first
-connection — if your login takes a second, that's a server literally
-waking up because you arrived.
+The public server is built in: **`wss://vibecity-andrea.fly.dev/ws`**.
+It's a trial server for now, capped at 350 people online at once. It
+sleeps when nobody's around and wakes on the first connection — if your
+login takes a second, that's a server literally waking up because you
+arrived.
 
 No account needed. `vibeworld --anon` if you'd rather be nobody.
 
