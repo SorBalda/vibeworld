@@ -1,10 +1,9 @@
 # VibeWorld
 
-> A cyberpunk social space that runs in the terminal you already live in.
-> A neon planet of ten sciences, for developers *and* scientists: meet
-> people from fields that never share a corridor, keep each other
-> company at 2am while the code misbehaves — and when your AI agent
-> "fixes" the failing test by deleting it, take a rocket to the moon
+> Meet other developers and scientists in a shared cyberpunk world that
+> lives entirely inside your terminal. A neon planet of ten sciences: keep
+> each other company at 2am while the code misbehaves — and when your AI
+> agent "fixes" the failing test by deleting it, take a rocket to the moon
 > and scream.
 
 ![Terra and Luna, seen from space](docs/screenshots/space.png)
@@ -22,6 +21,8 @@ vibeworld
 The script detects your OS/arch, verifies the SHA256, and drops a single
 binary in `~/.local/bin`. Windows: grab `vibeworld-windows-amd64.exe` from
 the [Releases page](https://github.com/SorBalda/vibeworld/releases).
+Linux and Apple Silicon (M-series) Macs are supported today; **Intel Mac
+support is coming soon**.
 
 The public server is built in: **`wss://vibecity-andrea.fly.dev/ws`**,
 200 seats. It sleeps when nobody's around and wakes on the first
