@@ -102,7 +102,7 @@ crossroads everyone orbits. You orbit, you pick, you descend.
 ![The globe turning as you scroll through regions](docs/screenshots/planet-rotate.gif)
 
 In the Agora stands the Tablet of the **Ten Commandments of Science**
-("Thy agent 'fixed' the test. It is gone."):
+("Your agent 'fixed' the test. It is gone."):
 
 ![The Tablet of the Ten Commandments, in the Agora](docs/screenshots/agora-tablets.png)
 
