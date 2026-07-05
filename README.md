@@ -8,9 +8,10 @@
 > the failing test by deleting it, take a rocket to the moon and scream.
 
 It's a multiplayer TUI — you walk it, you talk in it, text or voice, no
-browser, no Electron. Discord for people who never left the terminal.
-Nobody else online right now? It still holds up solo (see *Fine on your
-own, too*).
+browser, no Electron. Cyberpunk, neon-lit, and more fun than Discord has
+any business being: launch your rage into orbit and let the whole planet
+watch it burn (see *The moon*). Nobody else online right now? It still
+holds up solo (see *Fine on your own, too*).
 
 ![Terra and Luna, seen from space](docs/screenshots/space.png)
 
