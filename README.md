@@ -26,7 +26,14 @@ planet reads it in the sky, right next to the moon (see *The moon*).
 A planet, not another server list. Come with friends and claim a
 street corner, or show up alone at 3am and watch comets from a ledge
 on the moon — it holds up either way (see *Fine on your own, too*).
-Installing it just to see it is a valid use case.
+Installing it just to see it is a valid use case:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh
+vibeworld
+```
+
+One binary, zero dependencies, checksum-verified — details in *Install*.
 
 ![Terra and Luna, seen from space](docs/screenshots/space.png)
 
