@@ -7,11 +7,26 @@
 > company at 2am while the code misbehaves; and when your AI agent "fixes"
 > the failing test by deleting it, take a rocket to the moon and scream.
 
-It's a multiplayer TUI — you walk it, you talk in it, text or voice, no
-browser, no Electron. Cyberpunk, neon-lit, and more fun than Discord has
-any business being: launch your rage into orbit and let the whole planet
-watch it burn (see *The moon*). Nobody else online right now? It still
-holds up solo (see *Fine on your own, too*).
+Discord became a list of servers.\
+Slack became work.\
+Social media became feeds.
+
+**We wanted a place.**
+
+So we built one — an MMO that runs in your terminal. Not a metaphor:
+a multiplayer TUI, a cyberpunk, neon-lit planet you walk street by
+street — no browser, no Electron, one pure-Go binary. Then it starts
+doing things terminals aren't supposed to do. Voice chat with zero
+extra installs — the codec ships inside the binary. A pixel-art avatar
+editor with a palette, undo, and working mouse support, in the
+terminal. A rocket to the moon, where you type what your LLM did to
+you this time and launch the scream into orbit — and everyone on the
+planet reads it in the sky, right next to the moon (see *The moon*).
+
+A planet, not another server list. Come with friends and claim a
+street corner, or show up alone at 3am and watch comets from a ledge
+on the moon — it holds up either way (see *Fine on your own, too*).
+Installing it just to see it is a valid use case.
 
 ![Terra and Luna, seen from space](docs/screenshots/space.png)
 
@@ -78,6 +93,15 @@ landmass. Engineering is another. The Agora sits at the center, the
 crossroads everyone orbits. You orbit, you pick, you descend.
 
 ![The globe turning as you scroll through regions](docs/screenshots/planet-rotate.gif)
+
+In the Agora stands the Tablet of the **Ten Commandments of Science**
+("Thy agent 'fixed' the test. It is gone."):
+
+![The Tablet of the Ten Commandments, in the Agora](docs/screenshots/agora-tablets.png)
+
+They're engraved at the crossroads of the world because every
+discipline walks past them on the way to its own continent. Nobody
+follows them. That's why they're carved in stone.
 
 ## Cities are street graphs
 
