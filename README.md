@@ -259,8 +259,7 @@ stays unpublished. What *is* open right now: the **Mod SDK**
 ([`mod-sdk/`](mod-sdk/)) is **Apache-2.0**. The client source is
 *planned* to open under **PolyForm
 Perimeter 1.0.0** (read it, mod it, build it — just don't ship a
-competing clone), but there's no date yet — take "soon" as intent, not
-a promise, and watch the repo.
+competing clone), but there's no date yet — watch the repo.
 
 Don't want to trust a closed world? **`vibeworld --offline`** runs a
 full self-contained world with no server at all — your machine, your
