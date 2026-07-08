@@ -155,6 +155,27 @@ and slash emotes, because some things a keyboard says better:
 whole set: `/punch`, `/jump`, `/rocket`, `/explode`, `/dance`, `/facepalm`,
 `/highfive`, `/coffee`, `/d20`.)
 
+## The arcade at the crossroads
+
+Two of the Agora's monuments are lying about being monuments. Step into **The
+Arena** and you're in **THE GRID**: a first-person neon corridor shooter where
+the gun is the git blame cannon, a magazine is 24 commits, reloading runs
+`git commit -am "reload"`, and the wave 5 boss is THE AGENT THAT DELETED YOUR
+TESTS. Step into **The Pulvinar** and it's **GLITCH COLLECTOR**: hold the
+firewall, squash the glitches before they chew through it.
+
+And here's the point: **they're multiplayer.** Walk in while someone's already
+playing and you don't watch, you *join the running match*, mid-wave, score and
+all. The other players are standing in the game with their own avatars and
+@handles: pixel busts on the Glitch playfield, full 3D billboards in the
+corridors of THE GRID. A CREW row keeps the tally, and whoever started the
+match holds the restart key. Press `R` as a guest and the game tells you
+exactly whose match you walked into.
+
+![alice and bob in the same match: Glitch Collector, then THE GRID](docs/screenshots/arcade-multiplayer.gif)
+
+No quarters. The cabinet at the center of the world runs on karma.
+
 ## Friends, and who's around
 
 Press `]` for the social column. Send someone a friend request and it waits for
