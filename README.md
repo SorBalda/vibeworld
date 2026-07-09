@@ -13,7 +13,7 @@ Social media became feeds.
 
 **We wanted a place.**
 
-So we built one. It's an MMO that runs in your terminal. Not a metaphor: a
+So we built one: an MMO that runs in your terminal. Not a metaphor: a
 multiplayer TUI, a cyberpunk neon-lit planet you walk street by street. No
 browser, no Electron, one pure-Go binary. Then it starts doing things terminals
 aren't supposed to do. Voice chat with zero extra installs (the codec ships
@@ -68,16 +68,16 @@ No account needed. `vibeworld --anon` if you'd rather be nobody.
 
 ## You, but honest
 
-On your first login you put on a specialization: a macro-area and one line of
-truth, shown on your card to everyone you meet.
+Nobody here is "passionate about technology". On first login you put on a
+specialization: a macro-area and one line of truth, shown on your card to
+everyone you meet.
 
 ![Choosing a specialization](docs/screenshots/specialization.png)
 
-Your card can also carry a **GitHub and/or LinkedIn link** (`p` to edit your own
-profile). Anyone who likes talking to you can press `g`/`l` on your card to open
-them, behind a two-step confirm, never a one-key surprise click. It's a social
-space for people who argue about code at 2am, so let networking happen where
-it's actually happening.
+Met someone whose 2am takes you want to keep? Your card can carry a **GitHub
+and/or LinkedIn link** (`p` to edit your own profile), and anyone who likes
+talking to you can press `g`/`l` on your card to open them, behind a two-step
+confirm, never a one-key surprise click.
 
 Then, that first time only, you get an avatar. There is a pixel editor. It has a
 palette, undo, mirror mode, a flood fill, and a 3D preview. Yes, the mouse
@@ -99,19 +99,20 @@ orbits. You orbit, you pick, you descend.
 
 ## Cities are street graphs
 
-Every city is a neon plan you actually *walk*, junction to junction. Corners are
-named after the people your field argues about.
+Your field already has famous corners: the people and papers everyone argues
+about. Here they're literal streets, a neon plan you *walk* junction to
+junction.
 
 ![Deep Learning city map](docs/screenshots/city-map.png)
 
-Press `Enter` on a corner and it goes full 3D: towers, rain of dead pixels,
-whoever else is standing there, and a chat panel. A corner is a room. A monument
-is a gathering. Walk up and you're in it.
+A corner is a room; a monument is a gathering. Press `Enter` on one and it goes
+full 3D: towers, rain of dead pixels, whoever else is standing there, and a
+chat panel. Walk up and you're in it.
 
 ![A 3D corner scene](docs/screenshots/city-3d.png)
 
-Every landmark also keeps a **rite**: press `!` on an empty chat line inside a
-monument and you perform its ceremonial act. The landmark wakes in a
+Want to leave a mark that outlives the scroll? Every landmark keeps a **rite**:
+press `!` on an empty chat line inside a monument and the landmark wakes in a
 full-screen blaze, and the plaque remembers ("rite performed 12× in living
 memory · last by @you"). A junction's chat is disposable traffic; a monument's
 transcript is its engraving.
@@ -125,30 +126,30 @@ gone."):
 ![The Tablet of the Ten Commandments, in the Agora](docs/screenshots/agora-tablets.png)
 
 They're engraved at the crossroads of the world because every discipline walks
-past them on the way to its own continent. Nobody follows them. That's why
-they're carved in stone.
+past them on the way to its own continent. You've broken at least three this
+week. Nobody follows them. That's why they're carved in stone.
 
 ## The HELP flare
 
-Stuck at 2am? Step into any corner (`Enter` on it from the street) and press `!`
-to type what's wrong. A red ribbon with a countdown goes up over the junction
-for everyone in the city to see. It's on-call for people, not pagers.
+Stuck on a bug at 2am? Step into a corner, hit `!`, and say what's wrong: a red
+ribbon with a countdown goes up over your junction, and anyone in the city sees
+it and can walk over. On-call for people, not pagers.
 
 ![A HELP beacon, seen by another player](docs/screenshots/help-flare.gif)
 
 ## The moon
 
-Take the rocket to Luna, the philosophic moon. Two things happen up there, and
-they're opposites.
+Some nights you need to scream. Some nights you need the sky. Take the rocket
+to Luna, the philosophic moon: it does both, and they're opposites.
 
 **Screaming.** At the **Complaint Crater** there's a booth. You type what your
 LLM did to you this time; the RAGE meter fills as you go, and it has opinions.
 SHOUTING counts triple, a barrage of "???" counts sixfold, so real fury pins the
 meter to full long before a calm paragraph would. Then you launch your tantrum
 into orbit. Your scream joins the wall under `▼ LAST SCREAM HEARD FROM SPACE`,
-and here's the thing: *everyone sees it.* Anyone looking at the sky from anywhere
-on the planet gets your words next to the moon, and it stays there through
-server restarts. Screaming into the void, except the void has a player count.
+and *everyone sees it*: anyone looking up from anywhere on the planet gets your
+words next to the moon, and they survive server restarts. Screaming into the
+void, except the void has a player count.
 
 ![The last scream heard from space](docs/screenshots/moon-scream.gif)
 
@@ -165,8 +166,8 @@ music-only sanctuary: no voice, no noise. Some places should stay like that.
 
 ## Other people
 
-Corner chat, city chat, DMs with image and PDF sharing, profiles, block/report,
-and slash emotes, because some things a keyboard says better:
+Some things a keyboard says better. Corner chat, city chat, DMs that carry
+images and PDFs, profiles, block/report, and slash emotes:
 
 ![Two players and a /kiss](docs/screenshots/kiss.png)
 
@@ -176,26 +177,27 @@ whole set: `/punch`, `/jump`, `/rocket`, `/explode`, `/dance`, `/facepalm`,
 
 ## Friends, and who's around
 
-Press `]` for the social column. Send someone a friend request and it waits for
-them to accept, even if they're offline right now; it gets delivered the next
-time they log in. Once you're friends you see them live: a `●` when they're
-online, plus where on the planet they're standing, so you know whether to walk
-over or take the rocket up. Requests coming *your* way sit in a `⇄ REQUESTS`
+Wondering if your people are on? Press `]`: the social column shows your
+friends live, a `●` when they're online plus where on the planet they're
+standing, so you know whether to walk over or take the rocket up. Friend
+requests survive time zones: send one to someone offline and it's delivered
+when they next log in, and requests coming *your* way sit in a `⇄ REQUESTS`
 row you accept or decline without leaving the column.
 
-The same column has **People**: the whole roster of everyone online right now,
-each with where they are. Type to search by handle, GitHub login, or field, then
-open a profile, DM them, or send a friend request straight from the list.
 Finding one person in a ten-continent world shouldn't take a map and a prayer.
+The same column has **People**: everyone online right now, each with where they
+are. Type to search by handle, GitHub login, or field, then open a profile, DM
+them, or send a friend request straight from the list.
 
 ## Voice, with zero installs
 
-Press `ctrl+V` and you're talking. Press it again and you stop. The first press
-is your mic consent; until then you're listen-only. When your mic is actually
-live the status line turns **red** and reads `ON AIR`, so you never have to
-wonder whether the world can hear you. The codec is pure Go, and the binary you
-already downloaded is the whole stack: no PortAudio, no Opus packages, no
-"please install these 12 system libraries first".
+Some arguments are faster out loud. Press `ctrl+V` and you're talking; press it
+again and you stop. The first press is your mic consent; until then you're
+listen-only, and when your mic is actually live the status line turns **red**
+and reads `ON AIR`, so you never wonder whether the world can hear you.
+The binary you already downloaded is the whole stack (the codec is pure Go): no
+PortAudio, no Opus packages, no "please install these 12 system libraries
+first".
 
 ![ON AIR at the Ledge](docs/screenshots/voice-on-air.png)
 
@@ -204,8 +206,8 @@ You would have too.)
 
 ## The arcade at the crossroads
 
-Two of the Agora's monuments are lying about being monuments. Step into **The
-Arena** and you're in **THE GRID**: a first-person neon corridor shooter where
+Sometimes the fix is shooting something. Two of the Agora's monuments are lying
+about being monuments. Step into **The Arena** and you're in **THE GRID**: a first-person neon corridor shooter where
 the gun is the git blame cannon, a magazine is 24 commits, reloading runs
 `git commit -am "reload"`, and the wave 5 boss is THE AGENT THAT DELETED YOUR
 TESTS. Step into **The Pulvinar** and it's **GLITCH COLLECTOR**: hold the
@@ -215,7 +217,7 @@ CORE TEMP climbs while it prints a receipt for what you burned; give **The
 Crowd** a voice and the ROAR meter barely twitches for one person, then pegs in
 a beat for a full house.
 
-And here's the point: **the games are multiplayer.** Walk in while someone's
+The point: **the games are multiplayer.** Walk in while someone's
 already playing and you don't watch, you *join the running match*, mid-wave,
 score and all. The other players are standing in the game with their own
 avatars and @handles: pixel busts on the Glitch playfield, full 3D billboards
@@ -229,9 +231,9 @@ No quarters. The cabinet at the center of the world runs on karma.
 
 ## Fine on your own, too
 
-You don't need anyone else logged in for this to be worth it. Leave VibeWorld
-open on a second monitor, go sit in a room, watch the sky from the Ledge, or read
-the last scream heard from space. The planet, the moon, the beacons, the wall:
+It's 3am and nobody you know is awake. Fine. Leave VibeWorld open on a second
+monitor, go sit in a room, watch the sky from the Ledge, or read the last
+scream heard from space. The planet, the moon, the beacons, the wall:
 the world itself is company. This isn't `--offline`. You're still on the real
 server, it's just that some nights it's quiet. Someone tends to wander in
 eventually.
