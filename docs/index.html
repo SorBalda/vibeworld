@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VibeWorld · an MMO in your terminal</title>
+<meta name="description" content="VibeWorld is an MMO that runs in your terminal: a cyberpunk neon planet of nine sciences you walk street by street. One pure-Go binary, zero dependencies, voice chat included. Free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sorbalda.github.io/vibeworld/">
+<meta property="og:title" content="VibeWorld · an MMO in your terminal">
+<meta property="og:description" content="Walk a neon planet of nine sciences. Meet other devs at 2am street corners. And when your AI agent deletes your failing test, take a rocket to the moon and scream.">
+<meta property="og:image" content="https://raw.githubusercontent.com/SorBalda/vibeworld/main/docs/screenshots/moon-scream.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VibeWorld · an MMO in your terminal">
+<meta name="twitter:description" content="Walk a neon planet of nine sciences. Meet other devs at 2am street corners. And when your AI agent deletes your failing test, take a rocket to the moon and scream.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SorBalda/vibeworld/main/docs/screenshots/moon-scream.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23050508'/%3E%3Crect x='7' y='6' width='8' height='20' fill='%2300f0ff'/%3E%3Crect x='18' y='6' width='8' height='20' fill='%23ff2fb3'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#050508;
+  --panel:#0b0b14;
+  --line:#1c1c2e;
+  --fg:#c8d3d5;
+  --dim:#7a8896;
+  --cyan:#00f0ff;
+  --magenta:#ff2fb3;
+  --green:#39ff88;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+/* faint CRT scanlines, fixed overlay */
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  pointer-events:none;
+  background:repeating-linear-gradient(0deg,rgba(0,0,0,.28) 0 1px,transparent 1px 3px);
+  opacity:.35;
+  z-index:9;
+}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:6px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1rem}
+section{padding:3rem 0}
+
+/* ---------- hero ---------- */
+header{padding:3.5rem 0 3rem;text-align:center}
+.prompt{color:var(--green)}
+h1{
+  font-size:clamp(2.2rem,7vw,3.6rem);
+  letter-spacing:.08em;
+  color:#fff;
+  text-shadow:0 0 12px rgba(0,240,255,.55),0 0 42px rgba(255,47,179,.25);
+}
+h1 .accent{color:var(--cyan)}
+.tagline{
+  margin-top:.6rem;
+  font-size:clamp(1.05rem,3vw,1.35rem);
+  color:var(--magenta);
+  text-shadow:0 0 10px rgba(255,47,179,.4);
+}
+.sub{max-width:44rem;margin:1rem auto 0;color:var(--dim)}
+.hero-shot{margin:2rem auto 0;max-width:800px}
+.hero-shot img{box-shadow:0 0 24px rgba(0,240,255,.12)}
+.caption{font-size:.8rem;color:var(--dim);margin-top:.4rem;text-align:center}
+
+/* install box */
+.install{max-width:800px;margin:2rem auto 0;text-align:left}
+.install-label{font-size:.8rem;color:var(--dim);margin-bottom:.4rem}
+.cmdbox{
+  display:flex;align-items:center;gap:.75rem;
+  background:var(--panel);
+  border:1px solid var(--cyan);
+  border-radius:6px;
+  padding:.8rem 1rem;
+  cursor:pointer;
+  box-shadow:0 0 14px rgba(0,240,255,.15) inset,0 0 10px rgba(0,240,255,.08);
+}
+.cmdbox:hover{border-color:#7ff8ff}
+.cmdbox code{
+  flex:1;
+  min-width:0;
+  overflow-x:auto;
+  white-space:nowrap;
+  color:var(--green);
+  font-size:.85rem;
+  scrollbar-width:thin;
+}
+.copy-btn{
+  flex:none;
+  font-family:inherit;font-size:.8rem;
+  background:transparent;color:var(--cyan);
+  border:1px solid var(--cyan);border-radius:4px;
+  padding:.35rem .7rem;cursor:pointer;
+}
+.copy-btn:hover{background:rgba(0,240,255,.1)}
+.copy-btn.done{color:var(--green);border-color:var(--green)}
+.alt-dl{margin-top:.7rem;font-size:.85rem;color:var(--dim)}
+.small-print{margin-top:1.6rem;font-size:.8rem;color:var(--dim)}
+
+/* ---------- sections ---------- */
+h2{
+  font-size:1.3rem;color:#fff;margin-bottom:1.6rem;letter-spacing:.05em;
+}
+h2::before{content:"» ";color:var(--magenta)}
+
+/* feature cards */
+.cards{display:grid;grid-template-columns:1fr;gap:1.2rem}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:1rem;
+}
+.card:hover{border-color:var(--cyan)}
+.card h3{font-size:1rem;color:var(--cyan);margin-bottom:.5rem}
+.card p{font-size:.88rem;color:var(--fg)}
+.card img{margin-top:.9rem}
+.card kbd{
+  background:#141422;border:1px solid var(--line);border-radius:3px;
+  padding:0 .3em;font-family:inherit;font-size:.85em;color:var(--green);
+}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:1fr;gap:1.2rem}
+@media(min-width:640px){.gallery{grid-template-columns:1fr 1fr 1fr}}
+.gallery figure{margin:0}
+.gallery figcaption{font-size:.78rem;color:var(--dim);margin-top:.35rem}
+
+/* FAQ */
+details{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  margin-bottom:.8rem;
+  padding:.8rem 1rem;
+}
+details[open]{border-color:var(--magenta)}
+summary{
+  cursor:pointer;color:#fff;font-size:.95rem;
+  list-style:none;
+}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"? ";color:var(--magenta)}
+details p{margin-top:.7rem;font-size:.88rem;color:var(--fg)}
+details p+p{margin-top:.5rem}
+details code{color:var(--green);font-size:.85em}
+
+/* footer */
+footer{
+  border-top:1px solid var(--line);
+  padding:2.2rem 0 3rem;
+  font-size:.82rem;color:var(--dim);
+  text-align:center;
+}
+footer .links{margin-bottom:1rem}
+footer .links a{margin:0 .6rem}
+footer p{max-width:44rem;margin:.5rem auto 0}
+.signoff{color:var(--cyan);margin-top:1.4rem}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="prompt">$ vibeworld</div>
+  <h1>VIBE<span class="accent">WORLD</span></h1>
+  <p class="tagline">An MMO that runs in your terminal.</p>
+  <p class="sub">Walk a neon planet of nine sciences. Meet other devs at 2am
+  street corners. And when your AI agent "fixes" the failing test by deleting
+  it, take a rocket to the moon and scream.</p>
+
+  <div class="hero-shot">
+    <img src="screenshots/moon-scream.gif"
+         alt="The Complaint Crater on the moon: typing a scream about an LLM, the RAGE meter filling, then the scream launching into orbit"
+         width="1100" height="675">
+    <p class="caption">The Complaint Crater. Your scream joins the sky. Everyone on the planet reads it.</p>
+  </div>
+
+  <div class="install">
+    <p class="install-label">Install · one command, one binary, zero dependencies:</p>
+    <div class="cmdbox" id="cmdbox" title="Click to copy">
+      <code id="cmd">curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh</code>
+      <button class="copy-btn" id="copybtn" aria-label="Copy install command">copy</button>
+    </div>
+    <p class="alt-dl">Or grab a binary from the
+      <a href="https://github.com/SorBalda/vibeworld/releases/latest">latest release</a>
+      (Windows: <code>vibeworld-windows-amd64.exe</code>).</p>
+  </div>
+
+  <p class="small-print">One pure-Go binary · voice chat included · Linux ·
+  Apple Silicon macOS · Windows · SHA256-verified · no account needed</p>
+</header>
+
+<section class="wrap" id="features">
+  <h2>What's down there</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>A planet you walk</h3>
+      <p>Continents are disciplines. Artificial Intelligence is a landmass,
+      Engineering is another, and the Agora sits at the crossroads. Orbit,
+      pick, descend, and walk your own field street by street with a 16x16
+      pixel avatar you drew yourself.</p>
+      <img src="screenshots/planet-rotate.gif" loading="lazy"
+           alt="The globe turning as you scroll through regions" width="1100" height="675">
+    </div>
+
+    <div class="card">
+      <h3>Scream at the moon</h3>
+      <p>At the Complaint Crater you type what your LLM did to you this time.
+      SHOUTING counts triple. Launch it into orbit and anyone looking up from
+      anywhere on the planet reads your words next to the moon. Screams
+      survive server restarts.</p>
+      <img src="screenshots/scream-from-space.png" loading="lazy"
+           alt="The last scream heard from space, visible in the sky next to the moon" width="2048" height="1223">
+    </div>
+
+    <div class="card">
+      <h3>An arcade at the crossroads</h3>
+      <p>Two of the Agora's monuments are lying about being monuments. THE
+      GRID is a first-person neon corridor shooter where reloading runs
+      <code>git commit -am "reload"</code>; GLITCH COLLECTOR is firewall
+      defense. Both multiplayer: walk in mid-wave and you join the running
+      match, score and all.</p>
+      <img src="screenshots/arcade-multiplayer.gif" loading="lazy"
+           alt="Two players in the same match: Glitch Collector, then THE GRID" width="900" height="552">
+    </div>
+
+    <div class="card">
+      <h3>The HELP flare</h3>
+      <p>Stuck on a bug at 2am? Step into a corner, hit <kbd>!</kbd>, and say
+      what's wrong: a red ribbon with a countdown goes up over your junction,
+      and anyone in the city can walk over. On-call for people, not pagers.</p>
+      <img src="screenshots/help-flare.png" loading="lazy"
+           alt="A HELP beacon over a junction, seen by another player" width="2048" height="1223">
+    </div>
+
+    <div class="card">
+      <h3>Voice, zero installs</h3>
+      <p>Press <kbd>ctrl+V</kbd> and you're talking. The audio codec is pure
+      Go and ships inside the binary: no PortAudio, no Opus packages, no
+      "please install these 12 system libraries first". When your mic is live
+      the status line turns red and reads ON AIR, so you always know.</p>
+      <img src="screenshots/voice-on-air.png" loading="lazy"
+           alt="Voice chat ON AIR at the Stargazer's Ledge" width="1500" height="920">
+    </div>
+
+    <div class="card">
+      <h3>Monuments keep rites</h3>
+      <p>A corner is a room; a monument is a gathering. Press <kbd>!</kbd>
+      inside one and the landmark wakes in a full-screen blaze, and the plaque
+      remembers who performed the rite last. A junction's chat is disposable
+      traffic; a monument's transcript is its engraving.</p>
+      <img src="screenshots/agora-tablets.png" loading="lazy"
+           alt="The Tablet of the Ten Commandments of Science, a monument in the Agora" width="2048" height="1223">
+    </div>
+
+  </div>
+</section>
+
+<section class="wrap" id="gallery">
+  <h2>How it looks</h2>
+  <div class="gallery">
+    <figure>
+      <img src="screenshots/stargazing.gif" loading="lazy"
+           alt="Stargazing together at the Stargazer's Ledge: comets and auroras over the moon" width="1100" height="675">
+      <figcaption>The Stargazer's Ledge. Eleven kinds of sky event, synced across everyone watching.</figcaption>
+    </figure>
+    <figure>
+      <img src="screenshots/city-map.png" loading="lazy"
+           alt="The Deep Learning city map: a neon street graph of famous corners" width="2048" height="1223">
+      <figcaption>Deep Learning is a street graph. The corners are the people and papers you argue about.</figcaption>
+    </figure>
+    <figure>
+      <img src="screenshots/avatar-editor.png" loading="lazy"
+           alt="The pixel-art avatar editor with palette, undo, mirror mode, and 3D preview" width="2048" height="1223">
+      <figcaption>The avatar studio. Palette, undo, flood fill, 3D preview. The mouse works. In the terminal.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="wrap" id="faq">
+  <h2>Questions you were about to ask</h2>
+
+  <details>
+    <summary>Is it open source?</summary>
+    <p>Not yet, and here's the honest version. VibeWorld ships today as closed
+    binaries (free to use) talking to a closed server. What is open right now:
+    the <a href="https://github.com/SorBalda/vibeworld/tree/main/mod-sdk">Mod
+    SDK</a> is Apache-2.0, declarative worldpacks, data instead of code.</p>
+    <p>The client source is planned to open under PolyForm Perimeter 1.0.0
+    (read it, mod it, build it, just don't ship a competing clone), but there's
+    no date. Take "soon" as intent, not a promise, and watch the repo.</p>
+  </details>
+
+  <details>
+    <summary>Is it safe to run a closed binary?</summary>
+    <p>The install script verifies the SHA256 of every release before it drops
+    the binary in <code>~/.local/bin</code>. Your connection is TLS
+    (<code>wss://</code>), and everything that reaches your terminal is
+    stripped of control and escape sequences before it renders, so a hostile
+    peer can't hijack your terminal through a chat line.</p>
+    <p>What the client sends: your handle, chat, DMs, shared images/PDFs, and
+    voice go through the server, which can see them (no end-to-end encryption;
+    voice is ephemeral and never recorded). Don't send anything you'd mind a
+    server operator reading.</p>
+    <p>Don't want to trust a closed world at all?
+    <code>vibeworld --offline</code> runs a full self-contained world with no
+    server whatsoever. Your machine, your rules, nothing phoned home.</p>
+  </details>
+
+  <details>
+    <summary>Does it cost anything?</summary>
+    <p>No. Free, no account needed (<code>vibeworld --anon</code> if you'd
+    rather be nobody), and no microtransactions: the arcade at the center of
+    the world runs on karma.</p>
+    <p>VibeWorld is early: one trial server, capped at 350 online at once. It
+    sleeps when nobody's around and wakes on the first connection, so if your
+    login takes a second, that's the server booting because you showed up. An
+    empty world shouldn't run up an idle cloud bill.</p>
+  </details>
+
+  <details>
+    <summary>Windows / macOS / Linux?</summary>
+    <p>Linux and Apple Silicon (M-series) Macs install with the one-liner
+    above. Windows: grab <code>vibeworld-windows-amd64.exe</code> from the
+    <a href="https://github.com/SorBalda/vibeworld/releases/latest">Releases
+    page</a>. Intel Mac support is coming soon.</p>
+    <p>Updating is the same command: the script always fetches the latest
+    release, and vibeworld shows an <code>▲ update available</code> line at
+    login when there's a new one.</p>
+  </details>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://github.com/SorBalda/vibeworld">GitHub</a> ·
+      <a href="https://github.com/SorBalda/vibeworld/releases/latest">Releases</a> ·
+      <a href="https://github.com/SorBalda/vibeworld/tree/main/mod-sdk">Mod SDK</a>
+    </div>
+    <p>License: the binaries are free to use; the Mod SDK is Apache-2.0; the
+    client is planned to open under PolyForm Perimeter 1.0.0. Full text in
+    <a href="https://github.com/SorBalda/vibeworld/blob/main/LICENSE">LICENSE</a>.</p>
+    <p>The name is reserved:
+    <a href="https://github.com/SorBalda/vibeworld/blob/main/TRADEMARK.md">TRADEMARK.md</a>.</p>
+    <p class="signoff">Your terminal has been a place of work for decades.
+    It can be a place, full stop. See you on the moon. ✦</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var box=document.getElementById('cmdbox');
+  var btn=document.getElementById('copybtn');
+  var cmd=document.getElementById('cmd').textContent;
+  function done(){
+    btn.textContent='copied ✓';
+    btn.classList.add('done');
+    setTimeout(function(){
+      btn.textContent='copy';
+      btn.classList.remove('done');
+    },1800);
+  }
+  function fallback(){
+    var ta=document.createElement('textarea');
+    ta.value=cmd;
+    ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);
+    ta.select();
+    try{document.execCommand('copy');done();}catch(e){}
+    document.body.removeChild(ta);
+  }
+  box.addEventListener('click',function(){
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(cmd).then(done,fallback);
+    }else{fallback();}
+  });
+})();
+</script>
+
+</body>
+</html>
