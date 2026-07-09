@@ -20,19 +20,11 @@ aren't supposed to do. Voice chat with zero extra installs (the codec ships
 inside the binary). A pixel-art avatar editor with a palette, undo, and a mouse
 that actually works, in the terminal. A rocket to the moon, where you type what
 your LLM did to you this time and launch the scream into orbit, and everyone on
-the planet reads it in the sky right next to the moon (see *The moon*).
+the planet reads it in the sky right next to the moon.
 
 A planet, not another server list. Come with friends and claim a street corner,
 or show up alone at 3am and watch comets from a ledge on the moon. It holds up
-either way (see *Fine on your own, too*). Installing it just to look at it is a
-valid use case:
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh
-vibeworld
-```
-
-One binary, zero dependencies, checksum-verified. Details in *Install*.
+either way. Installing it just to look at it is a valid use case.
 
 ![Terra and Luna, seen from space](docs/screenshots/space.png)
 
@@ -40,12 +32,6 @@ Leave it running on a second monitor while you actually work. It isn't asking
 for your attention. It's just there, the way a window is.
 
 ![Working on the main screen, VibeWorld alive on the second](docs/screenshots/second-monitor.svg)
-
-Take the rocket to Luna and you can just... watch. Alone, or next to whoever's
-already sitting at the Stargazer's Ledge. The sky doesn't check who's there
-before it's worth looking at.
-
-![Watching the sky together](docs/screenshots/stargazing.gif)
 
 ## Install
 
@@ -63,64 +49,22 @@ in `~/.local/bin`. Windows: grab `vibeworld-windows-amd64.exe` from the
 Silicon (M-series) Macs are supported today; **Intel Mac support is coming
 soon**.
 
+**Updating** is the same command: the script always fetches the latest release
+(on Windows, grab the newest `.exe` from Releases). You don't need to check by
+hand. When a new version is out, vibeworld shows a `▲ update available` line at
+login with the exact command to run, and `vibeworld --version` prints what
+you're running. To stay in the loop, watch the Releases page (GitHub → Watch →
+Custom → Releases).
+
 The public server is built in: **`wss://vibecity-andrea.fly.dev/ws`**. VibeWorld
 is early: one trial server, capped at 350 online at once, and it sleeps when
 nobody's around and wakes on the first connection. If your login takes a second,
 that's the server booting because you showed up. That's a feature, not a crowd;
 an empty world shouldn't run up an idle cloud bill. Some nights it *will* be
 quiet, and that's fine. The world's still live and there's plenty to do with no
-one else online (see *Fine on your own, too*). Someone tends to wander in
-eventually.
+one else online (see *Fine on your own, too*).
 
 No account needed. `vibeworld --anon` if you'd rather be nobody.
-
-## Update
-
-Same command as installing. The script always fetches the latest release:
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh
-```
-
-Windows: grab the newest `vibeworld-windows-amd64.exe` from the
-[Releases page](https://github.com/SorBalda/vibeworld/releases).
-
-You don't need to check by hand. When a new version is out, vibeworld shows a
-`▲ update available` line at login with the exact command to run.
-`vibeworld --version` prints what you're running. To stay in the loop, watch the
-[Releases page](https://github.com/SorBalda/vibeworld/releases) (GitHub → Watch →
-Custom → Releases).
-
-## A planet of nine sciences and a crossroads
-
-Log in and you're floating between Terra and Luna. Pick a direction and you're
-in it. Continents are disciplines. Artificial Intelligence is a landmass.
-Engineering is another. The Agora sits at the center, the crossroads everyone
-orbits. You orbit, you pick, you descend.
-
-![The globe turning as you scroll through regions](docs/screenshots/planet-rotate.gif)
-
-In the Agora stands the Tablet of the **Ten Commandments of Science** ("Your
-agent 'fixed' the test. It is gone."):
-
-![The Tablet of the Ten Commandments, in the Agora](docs/screenshots/agora-tablets.png)
-
-They're engraved at the crossroads of the world because every discipline walks
-past them on the way to its own continent. Nobody follows them. That's why
-they're carved in stone.
-
-## Cities are street graphs
-
-Every city is a neon plan you actually *walk*, junction to junction. Corners are
-named after the people your field argues about.
-
-![Deep Learning city map](docs/screenshots/city-map.png)
-
-Press `Enter` on a corner and it goes full 3D: towers, rain of dead pixels,
-whoever else is standing there, and a chat panel. A corner is a room. A monument
-is a gathering. Walk up and you're in it.
-
-![A 3D corner scene](docs/screenshots/city-3d.png)
 
 ## You, but honest
 
@@ -144,65 +88,45 @@ back later and you land straight on the globe, no re-onboarding.
 
 ![The avatar studio](docs/screenshots/avatar-editor.png)
 
-## Other people
+## A planet of nine sciences and a crossroads
 
-Corner chat, city chat, DMs with image and PDF sharing, profiles, block/report,
-and slash emotes, because some things a keyboard says better:
+Log in and you're floating between Terra and Luna. Pick a direction and you're
+in it. Continents are disciplines. Artificial Intelligence is a landmass.
+Engineering is another. The Agora sits at the center, the crossroads everyone
+orbits. You orbit, you pick, you descend.
 
-![Two players and a /kiss](docs/screenshots/kiss.png)
+![The globe turning as you scroll through regions](docs/screenshots/planet-rotate.gif)
 
-`/kiss`. Pixel hearts. `*mhua*`. No microtransactions were involved. (There's a
-whole set: `/punch`, `/jump`, `/rocket`, `/explode`, `/dance`, `/facepalm`,
-`/highfive`, `/coffee`, `/d20`.)
+## Cities are street graphs
 
-## The arcade at the crossroads
+Every city is a neon plan you actually *walk*, junction to junction. Corners are
+named after the people your field argues about.
 
-Two of the Agora's monuments are lying about being monuments. Step into **The
-Arena** and you're in **THE GRID**: a first-person neon corridor shooter where
-the gun is the git blame cannon, a magazine is 24 commits, reloading runs
-`git commit -am "reload"`, and the wave 5 boss is THE AGENT THAT DELETED YOUR
-TESTS. Step into **The Pulvinar** and it's **GLITCH COLLECTOR**: hold the
-firewall, squash the glitches before they chew through it.
+![Deep Learning city map](docs/screenshots/city-map.png)
 
-And here's the point: **they're multiplayer.** Walk in while someone's already
-playing and you don't watch, you *join the running match*, mid-wave, score and
-all. The other players are standing in the game with their own avatars and
-@handles: pixel busts on the Glitch playfield, full 3D billboards in the
-corridors of THE GRID. A CREW row keeps the tally, and whoever started the
-match holds the restart key. Press `R` as a guest and the game tells you
-exactly whose match you walked into.
+Press `Enter` on a corner and it goes full 3D: towers, rain of dead pixels,
+whoever else is standing there, and a chat panel. A corner is a room. A monument
+is a gathering. Walk up and you're in it.
 
-![alice and bob in the same match: Glitch Collector, then THE GRID](docs/screenshots/arcade-multiplayer.gif)
+![A 3D corner scene](docs/screenshots/city-3d.png)
 
-No quarters. The cabinet at the center of the world runs on karma.
+Every landmark also keeps a **rite**: press `!` on an empty chat line inside a
+monument and you perform its ceremonial act. The landmark wakes in a
+full-screen blaze, and the plaque remembers ("rite performed 12× in living
+memory · last by @you"). A junction's chat is disposable traffic; a monument's
+transcript is its engraving.
 
-## Friends, and who's around
+## The Ten Commandments of Science
 
-Press `]` for the social column. Send someone a friend request and it waits for
-them to accept, even if they're offline right now; it gets delivered the next
-time they log in. Once you're friends you see them live: a `●` when they're
-online, plus where on the planet they're standing, so you know whether to walk
-over or take the rocket up. Requests coming *your* way sit in a `⇄ REQUESTS`
-row you accept or decline without leaving the column.
+In the Agora, the crossroads at the center of the world, stands the Tablet of
+the **Ten Commandments of Science** ("Your agent 'fixed' the test. It is
+gone."):
 
-The same column has **People**: the whole roster of everyone online right now,
-each with where they are. Type to search by handle, GitHub login, or field, then
-open a profile, DM them, or send a friend request straight from the list.
-Finding one person in a ten-continent world shouldn't take a map and a prayer.
+![The Tablet of the Ten Commandments, in the Agora](docs/screenshots/agora-tablets.png)
 
-## Voice, with zero installs
-
-Press `ctrl+V` and you're talking. Press it again and you stop. The first press
-is your mic consent; until then you're listen-only. When your mic is actually
-live the status line turns **red** and reads `ON AIR`, so you never have to
-wonder whether the world can hear you. The codec is pure Go, and the binary you
-already downloaded is the whole stack: no PortAudio, no Opus packages, no
-"please install these 12 system libraries first".
-
-![ON AIR at the Ledge](docs/screenshots/voice-on-air.png)
-
-(That object in the sky showed up on its own during the screenshot. We kept it.
-You would have too.)
+They're engraved at the crossroads of the world because every discipline walks
+past them on the way to its own continent. Nobody follows them. That's why
+they're carved in stone.
 
 ## The HELP flare
 
@@ -237,6 +161,72 @@ watching the same thing. Press `ctrl+n` for lo-fi classical (Beethoven, at a
 sensible volume, on the actual moon). The **Contemplation Dome** next door is a
 music-only sanctuary: no voice, no noise. Some places should stay like that.
 
+![Watching the sky together](docs/screenshots/stargazing.gif)
+
+## Other people
+
+Corner chat, city chat, DMs with image and PDF sharing, profiles, block/report,
+and slash emotes, because some things a keyboard says better:
+
+![Two players and a /kiss](docs/screenshots/kiss.png)
+
+`/kiss`. Pixel hearts. `*mhua*`. No microtransactions were involved. (There's a
+whole set: `/punch`, `/jump`, `/rocket`, `/explode`, `/dance`, `/facepalm`,
+`/highfive`, `/coffee`, `/d20`.)
+
+## Friends, and who's around
+
+Press `]` for the social column. Send someone a friend request and it waits for
+them to accept, even if they're offline right now; it gets delivered the next
+time they log in. Once you're friends you see them live: a `●` when they're
+online, plus where on the planet they're standing, so you know whether to walk
+over or take the rocket up. Requests coming *your* way sit in a `⇄ REQUESTS`
+row you accept or decline without leaving the column.
+
+The same column has **People**: the whole roster of everyone online right now,
+each with where they are. Type to search by handle, GitHub login, or field, then
+open a profile, DM them, or send a friend request straight from the list.
+Finding one person in a ten-continent world shouldn't take a map and a prayer.
+
+## Voice, with zero installs
+
+Press `ctrl+V` and you're talking. Press it again and you stop. The first press
+is your mic consent; until then you're listen-only. When your mic is actually
+live the status line turns **red** and reads `ON AIR`, so you never have to
+wonder whether the world can hear you. The codec is pure Go, and the binary you
+already downloaded is the whole stack: no PortAudio, no Opus packages, no
+"please install these 12 system libraries first".
+
+![ON AIR at the Ledge](docs/screenshots/voice-on-air.png)
+
+(That object in the sky showed up on its own during the screenshot. We kept it.
+You would have too.)
+
+## The arcade at the crossroads
+
+Two of the Agora's monuments are lying about being monuments. Step into **The
+Arena** and you're in **THE GRID**: a first-person neon corridor shooter where
+the gun is the git blame cannon, a magazine is 24 commits, reloading runs
+`git commit -am "reload"`, and the wave 5 boss is THE AGENT THAT DELETED YOUR
+TESTS. Step into **The Pulvinar** and it's **GLITCH COLLECTOR**: hold the
+firewall, squash the glitches before they chew through it. The Agora's other
+two Works are at least honest about what they are: feed **The Furnace** and its
+CORE TEMP climbs while it prints a receipt for what you burned; give **The
+Crowd** a voice and the ROAR meter barely twitches for one person, then pegs in
+a beat for a full house.
+
+And here's the point: **the games are multiplayer.** Walk in while someone's
+already playing and you don't watch, you *join the running match*, mid-wave,
+score and all. The other players are standing in the game with their own
+avatars and @handles: pixel busts on the Glitch playfield, full 3D billboards
+in the corridors of THE GRID. A CREW row keeps the tally, and whoever started
+the match holds the restart key. Press `R` as a guest and the game tells you
+exactly whose match you walked into.
+
+![alice and bob in the same match: Glitch Collector, then THE GRID](docs/screenshots/arcade-multiplayer.gif)
+
+No quarters. The cabinet at the center of the world runs on karma.
+
 ## Fine on your own, too
 
 You don't need anyone else logged in for this to be worth it. Leave VibeWorld
@@ -257,7 +247,7 @@ eventually.
 | `Esc` | back out, all the way to space |
 | `c` | chat in the city |
 | `m` | cycle monuments |
-| `!` | raise a HELP flare (once inside a corner) |
+| `!` | raise a HELP flare (in a corner) · perform the rite (at a monument) |
 | `/kiss` `/punch` `/rocket` … | emotes, typed in chat |
 | `ctrl+V` | voice: press to talk, press again to stop |
 | `ctrl+n` | lo-fi classical, on the moon |
