@@ -26,7 +26,7 @@ A planet, not another server list. Come with friends and claim a street corner,
 or show up alone at 3am and watch comets from a ledge on the moon. It holds up
 either way. Installing it just to look at it is a valid use case.
 
-![Terra and Luna, seen from space](docs/screenshots/space.png)
+![The whole way down: space, the turning globe, a region, a city street, and a HELP flare answered at a corner](docs/screenshots/journey.gif)
 
 Leave it running on a second monitor while you actually work. It isn't asking
 for your attention. It's just there, the way a window is.
@@ -237,6 +237,8 @@ scream heard from space. The planet, the moon, the beacons, the wall:
 the world itself is company. This isn't `--offline`. You're still on the real
 server, it's just that some nights it's quiet. Someone tends to wander in
 eventually.
+
+![Terra and Luna, seen from space](docs/screenshots/space.png)
 
 ## Keys
 
