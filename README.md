@@ -287,17 +287,10 @@ data instead of code.
 
 ## License
 
-Today: VibeWorld ships as **closed binaries** (free to use) talking to a
-**closed, proprietary server**. Client source isn't public yet, and the server
-stays unpublished. What *is* open right now: the **Mod SDK**
-([`mod-sdk/`](mod-sdk/)) is **Apache-2.0**. The client source is *planned* to
-open under **PolyForm Perimeter 1.0.0** (read it, mod it, build it, just don't
-ship a competing clone), but there's no date. Take "soon" as intent, not a
-promise, and watch the repo.
-
-Don't want to trust a closed world? **`vibeworld --offline`** runs a full
-self-contained world with no server at all. Your machine, your rules, nothing
-phoned home.
+VibeWorld ships as **free binaries**. The **Mod SDK** ([`mod-sdk/`](mod-sdk/))
+is **Apache-2.0**; the client source is planned to open under **PolyForm
+Perimeter**. And **`vibeworld --offline`** runs a full self-contained world
+with no server at all, nothing phoned home.
 
 Full text: [`LICENSE`](LICENSE). The name is reserved: [`TRADEMARK.md`](TRADEMARK.md).
 

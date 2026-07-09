@@ -293,17 +293,15 @@ footer p{max-width:44rem;margin:.5rem auto 0}
 
   <details>
     <summary>Is it open source?</summary>
-    <p>Not yet, and here's the honest version. VibeWorld ships today as closed
-    binaries (free to use) talking to a closed server. What is open right now:
-    the <a href="https://github.com/SorBalda/vibeworld/tree/main/mod-sdk">Mod
-    SDK</a> is Apache-2.0, declarative worldpacks, data instead of code.</p>
-    <p>The client source is planned to open under PolyForm Perimeter 1.0.0
-    (read it, mod it, build it, just don't ship a competing clone), but there's
-    no date. Take "soon" as intent, not a promise, and watch the repo.</p>
+    <p>The <a href="https://github.com/SorBalda/vibeworld/tree/main/mod-sdk">Mod
+    SDK</a> is Apache-2.0 today. The client ships as free binaries, with the
+    source planned to open under PolyForm Perimeter. And
+    <code>vibeworld --offline</code> runs the whole world air-gapped on your
+    machine, no server involved.</p>
   </details>
 
   <details>
-    <summary>Is it safe to run a closed binary?</summary>
+    <summary>Is it safe to run?</summary>
     <p>The install script verifies the SHA256 of every release before it drops
     the binary in <code>~/.local/bin</code>. Your connection is TLS
     (<code>wss://</code>), and everything that reaches your terminal is
@@ -311,11 +309,8 @@ footer p{max-width:44rem;margin:.5rem auto 0}
     peer can't hijack your terminal through a chat line.</p>
     <p>What the client sends: your handle, chat, DMs, shared images/PDFs, and
     voice go through the server, which can see them (no end-to-end encryption;
-    voice is ephemeral and never recorded). Don't send anything you'd mind a
-    server operator reading.</p>
-    <p>Don't want to trust a closed world at all?
-    <code>vibeworld --offline</code> runs a full self-contained world with no
-    server whatsoever. Your machine, your rules, nothing phoned home.</p>
+    voice is ephemeral and never recorded). Prefer full isolation?
+    <code>vibeworld --offline</code> runs with no server whatsoever.</p>
   </details>
 
   <details>
