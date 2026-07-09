@@ -13,7 +13,7 @@ Social media became feeds.
 
 **We wanted a place.**
 
-So we built one: an MMO that runs in your terminal. Not a metaphor: a
+So we built one: a shared world that runs in your terminal. Not a metaphor: a
 multiplayer TUI, a cyberpunk neon-lit planet you walk street by street. No
 browser, no Electron, one pure-Go binary. Then it starts doing things terminals
 aren't supposed to do. Voice chat with zero extra installs (the codec ships
