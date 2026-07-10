@@ -29,7 +29,7 @@ either way. Installing it just to look at it is a valid use case.
 ![The whole way down: space, the turning globe, a region, a city street, and a HELP flare answered at a corner](docs/screenshots/journey.gif)
 
 Leave it running on a second monitor while you actually work. It isn't asking
-for your attention. It's just there, the way a window is.
+for your attention. It's just there, the way a window is. And it does not slow your work: only 30 MB of RAM are required!
 
 ![Working on the main screen, VibeWorld alive on the second](docs/screenshots/second-monitor.svg)
 
