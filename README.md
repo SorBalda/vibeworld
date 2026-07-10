@@ -1,6 +1,15 @@
 # VibeWorld
 
-> A neon planet of ten continents. Nine sciences orbit the Agora, the
+**Install & run** — one command, one binary, zero dependencies (voice chat included):
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh
+vibeworld
+```
+
+**Windows:** download [`vibeworld-windows-amd64.exe`](https://github.com/SorBalda/vibeworld/releases/latest) from Releases, then run `vibeworld`.
+
+> A neon planet of nine continents. Eight sciences orbit the Agora, the
 > crossroads at the center, and you walk a terminal map of your own field,
 > meeting other devs at street corners named after the people and papers you
 > argue about. Keep each other company at 2am while the code misbehaves. And
