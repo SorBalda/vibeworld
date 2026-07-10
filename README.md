@@ -6,8 +6,6 @@ A neon multiplayer world that runs in your terminal — one pure-Go binary, voic
 [![Mod SDK: Apache-2.0](https://img.shields.io/badge/Mod%20SDK-Apache--2.0-blue)](mod-sdk/)
 [![Platforms: Linux · macOS · Windows](https://img.shields.io/badge/platforms-Linux%20%C2%B7%20macOS%20%C2%B7%20Windows-informational)](#install)
 
-Free binaries · `vibeworld --offline` runs a full self-contained world, nothing phoned home · the **Mod SDK** is Apache-2.0.
-
 ![The whole way down: space, the turning globe, a region, a city corner conversation, the Stargazer's Ledge, and the moon](docs/screenshots/journey.gif)
 
 > A neon planet of nine continents. Eight sciences orbit the Agora, the
