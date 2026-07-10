@@ -157,7 +157,7 @@ sees it* — anyone looking up from anywhere on the planet gets your words next 
 the moon, and they survive server restarts. Screaming into the void, except the
 void has a player count.
 
-![The wall of last screams — "FUCK CLAUDE OPUS!!!" and a stack of dev complaints about what the model did this time](docs/screenshots/complaint-crater.gif)
+![Typing a scream at the Complaint Crater: the RAGE meter fills as you go, the tantrum launches into orbit, and "FUCK CLAUDE!!!!!" appears in the sky next to the moon](docs/screenshots/complaint-crater.gif)
 
 **Stargazing.** The moon also has quiet places. At the **Stargazer's Ledge** you
 sit with whoever's there and watch the sky run its own show: comets, auroras, a
