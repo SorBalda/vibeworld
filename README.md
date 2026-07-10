@@ -13,6 +13,8 @@ Social media became feeds.
 
 **We wanted a place.**
 
+**▶ See it, then install it:** [the landing site](https://sorbalda.github.io/vibeworld/) · [one-line install](#install) · [Releases](https://github.com/SorBalda/vibeworld/releases)
+
 So we built one: a shared world that runs in your terminal. Not a metaphor: a
 multiplayer TUI, a cyberpunk neon-lit planet you walk street by street. No
 browser, no Electron, one pure-Go binary. Then it starts doing things terminals
@@ -26,10 +28,11 @@ A planet, not another server list. Come with friends and claim a street corner,
 or show up alone at 3am and watch comets from a ledge on the moon. It holds up
 either way. Installing it just to look at it is a valid use case.
 
-![The whole way down: space, the turning globe, a region, a city street, and a HELP flare answered at a corner](docs/screenshots/journey.gif)
+![The whole way down: space, the turning globe, a region, a city corner conversation, the Stargazer's Ledge, and the moon](docs/screenshots/journey.gif)
 
-Leave it running on a second monitor while you actually work. It isn't asking
-for your attention. It's just there, the way a window is. And it does not slow your work: only 30 MB of RAM are required!
+Leave it running on a second monitor while you actually work — the whole world
+sips **about 30 MB of RAM** (a single browser tab eats more). It isn't asking
+for your attention. It's just there, the way a window is.
 
 ![Working on the main screen, VibeWorld alive on the second](docs/screenshots/second-monitor.svg)
 
@@ -129,6 +132,14 @@ They're engraved at the crossroads of the world because every discipline walks
 past them on the way to its own continent. You've broken at least three this
 week. Nobody follows them. That's why they're carved in stone.
 
+## The Stands
+
+Also at the Agora: **The Stands**, the shared bulletin. Post a phrase or drop a
+PDF, and like what resonates — the good ones stick around, liked and stacked, so
+the crossroads keeps a memory of what the world found worth saying.
+
+![The Stands — post a phrase or share a PDF, and like what resonates](docs/screenshots/stands-likes.png)
+
 ## The HELP flare
 
 Stuck on a bug at 2am? Step into a corner, hit `!`, and say what's wrong: a red
@@ -225,9 +236,11 @@ in the corridors of THE GRID. A CREW row keeps the tally, and whoever started
 the match holds the restart key. Press `R` as a guest and the game tells you
 exactly whose match you walked into.
 
-![alice and bob in the same match: Glitch Collector, then THE GRID](docs/screenshots/arcade-multiplayer.gif)
+![Two players in the same Glitch Collector match, crew tally and score climbing](docs/screenshots/arcade-multiplayer.gif)
 
 No quarters. The cabinet at the center of the world runs on karma.
+
+![THE GRID: a corridor rail-shooter where the enemies are giant recognizable scientist faces closing in fast](docs/screenshots/doom.gif)
 
 ## Fine on your own, too
 
