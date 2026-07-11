@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VibeWorld · a world in your terminal</title>
-<meta name="description" content="VibeWorld is a shared world that runs in your terminal: a cyberpunk neon planet of nine sciences you walk street by street. One pure-Go binary, zero dependencies, voice chat included. Free.">
+<meta name="description" content="VibeWorld is a shared world that runs in your terminal: a cyberpunk neon planet of eight sciences you walk street by street. One pure-Go binary, zero dependencies, voice chat included. Free.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sorbalda.github.io/vibeworld/">
 <meta property="og:title" content="VibeWorld · a world in your terminal">
-<meta property="og:description" content="Walk a neon planet of nine sciences. Meet other devs at 2am street corners. And when your AI agent deletes your failing test, take a rocket to the moon and scream.">
+<meta property="og:description" content="Walk a neon planet of eight sciences. Meet other devs at 2am street corners. And when your AI agent deletes your failing test, take a rocket to the moon and scream.">
 <meta property="og:image" content="https://raw.githubusercontent.com/SorBalda/vibeworld/main/docs/screenshots/moon-scream.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="VibeWorld · a world in your terminal">
-<meta name="twitter:description" content="Walk a neon planet of nine sciences. Meet other devs at 2am street corners. And when your AI agent deletes your failing test, take a rocket to the moon and scream.">
+<meta name="twitter:description" content="Walk a neon planet of eight sciences. Meet other devs at 2am street corners. And when your AI agent deletes your failing test, take a rocket to the moon and scream.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/SorBalda/vibeworld/main/docs/screenshots/moon-scream.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23050508'/%3E%3Crect x='7' y='6' width='8' height='20' fill='%2300f0ff'/%3E%3Crect x='18' y='6' width='8' height='20' fill='%23ff2fb3'/%3E%3C/svg%3E">
 <style>
@@ -174,7 +174,7 @@ footer p{max-width:44rem;margin:.5rem auto 0}
   <div class="prompt">$ vibeworld</div>
   <h1>VIBE<span class="accent">WORLD</span></h1>
   <p class="tagline">A shared world that runs in your terminal.</p>
-  <p class="sub">Walk a neon planet of nine sciences. Meet other devs at 2am
+  <p class="sub">Walk a neon planet of eight sciences. Meet other devs at 2am
   street corners. And when your AI agent "fixes" the failing test by deleting
   it, take a rocket to the moon and scream.</p>
 
@@ -194,6 +194,9 @@ footer p{max-width:44rem;margin:.5rem auto 0}
     <p class="alt-dl">Or grab a binary from the
       <a href="https://github.com/SorBalda/vibeworld/releases/latest">latest release</a>
       (Windows: <code>vibeworld-windows-amd64.exe</code>).</p>
+    <img src="screenshots/install.gif" loading="lazy" style="margin-top:.9rem"
+         alt="The one-liner in action: curl pipes to sh, the binary downloads, the SHA256 verifies, and it says See you on the moon"
+         width="880" height="117">
   </div>
 
   <p class="small-print">One pure-Go binary · voice chat included · Linux ·
@@ -220,6 +223,9 @@ footer p{max-width:44rem;margin:.5rem auto 0}
       SHOUTING counts triple. Launch it into orbit and anyone looking up from
       anywhere on the planet reads your words next to the moon. Screams
       survive server restarts.</p>
+      <img src="screenshots/complaint-crater.gif" loading="lazy"
+           alt="Typing a scream at the Complaint Crater: the input line fills, the RAGE meter climbs, the rocket launches, and the scream tops the wall"
+           width="1200" height="736">
       <img src="screenshots/scream-from-space.png" loading="lazy"
            alt="The last scream heard from space, visible in the sky next to the moon" width="2048" height="1223">
     </div>
@@ -235,8 +241,9 @@ footer p{max-width:44rem;margin:.5rem auto 0}
       running match, score and all.</p>
       <img src="screenshots/arcade-multiplayer.gif" loading="lazy"
            alt="Two players in the same match: Glitch Collector, then THE GRID" width="900" height="552">
-      <img src="screenshots/doom.gif" loading="lazy"
-           alt="THE GRID: a corridor shooter where the enemies are giant recognizable scientist faces closing in" width="1000" height="504">
+      <img src="screenshots/grid-labels.gif" loading="lazy"
+           alt="THE GRID: a corridor shooter where the enemies are your actual backlog — one labeled PEER REVIEWED, another 8 more revisions requested — closing in fast"
+           width="640" height="323">
     </div>
 
     <div class="card">
@@ -253,8 +260,8 @@ footer p{max-width:44rem;margin:.5rem auto 0}
       <p>Stuck on a bug at 2am? Step into a corner, hit <kbd>!</kbd>, and say
       what's wrong: a red ribbon with a countdown goes up over your junction,
       and anyone in the city can walk over. On-call for people, not pagers.</p>
-      <img src="screenshots/help-flare.png" loading="lazy"
-           alt="A HELP beacon over a junction, seen by another player" width="2048" height="1223">
+      <img src="screenshots/help-flare.gif" loading="lazy"
+           alt="A HELP beacon going up over a junction, seen by another player walking over" width="950" height="583">
     </div>
 
     <div class="card">
