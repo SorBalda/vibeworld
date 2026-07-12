@@ -54,13 +54,11 @@ OS/arch, verifies the SHA256, and drops a single binary in `~/.local/bin`.
 
 Platforms: Linux x64/arm64 ✓ · Apple Silicon ✓ · Windows x64 `.exe` ✓ · **Intel Mac soon**.
 
-**Updating** is the same command — it always fetches the latest release, and at
-login vibeworld shows a `▲ update available` line with exactly what to run.
+**Updating** is the same command — it always fetches the latest release (and at
+login vibeworld shows a `▲ update available`, you can type `u` and it automatically updates).
 
 The public server is built in: **`wss://vibecity-andrea.fly.dev/ws`**. It's early
-— one trial server, capped at 350 online, asleep until someone connects. If your
-login takes a second, that's the server booting because you showed up: that's a
-feature, not a crowd, since an empty world shouldn't run up an idle cloud bill.
+— one trial server, capped at 350 online, asleep until someone connects.
 
 No account needed. `vibeworld --anon` if you'd rather be nobody.
 
