@@ -64,6 +64,8 @@ feature, not a crowd, since an empty world shouldn't run up an idle cloud bill.
 
 No account needed. `vibeworld --anon` if you'd rather be nobody.
 
+If this made you smile, a ⭐ helps the next person find it.
+
 ## You, but honest
 
 Nobody here is "passionate about technology". On first login you put on a
