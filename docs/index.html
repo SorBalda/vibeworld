@@ -4,17 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VibeWorld · a world in your terminal</title>
-<meta name="description" content="VibeWorld is a shared world that runs in your terminal: a cyberpunk neon planet of eight sciences you walk street by street. One pure-Go binary, zero dependencies, voice chat included. Free.">
+<meta name="description" content="VibeWorld is a shared world that runs in your terminal: a cyberpunk neon planet of nine sciences you walk street by street. One pure-Go binary, zero dependencies, voice chat included. Free.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sorbalda.github.io/vibeworld/">
 <meta property="og:title" content="VibeWorld · a world in your terminal">
-<meta property="og:description" content="Walk a neon planet of eight sciences. Meet other devs at 2am street corners. And when your AI agent deletes your failing test, take a rocket to the moon and scream.">
+<meta property="og:description" content="Walk a neon planet of nine sciences. Meet other devs at 2am street corners. And when your AI agent deletes your failing test, take a rocket to the moon and scream.">
 <meta property="og:image" content="https://raw.githubusercontent.com/SorBalda/vibeworld/main/docs/screenshots/moon-scream.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="VibeWorld · a world in your terminal">
-<meta name="twitter:description" content="Walk a neon planet of eight sciences. Meet other devs at 2am street corners. And when your AI agent deletes your failing test, take a rocket to the moon and scream.">
+<meta name="twitter:description" content="Walk a neon planet of nine sciences. Meet other devs at 2am street corners. And when your AI agent deletes your failing test, take a rocket to the moon and scream.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/SorBalda/vibeworld/main/docs/screenshots/moon-scream.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23050508'/%3E%3Crect x='7' y='6' width='8' height='20' fill='%2300f0ff'/%3E%3Crect x='18' y='6' width='8' height='20' fill='%23ff2fb3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/asciinema-player@3.8.2/dist/bundle/asciinema-player.css">
 <style>
 :root{
   --bg:#050508;
@@ -130,6 +131,13 @@ h2::before{content:"» ";color:var(--magenta)}
   padding:0 .3em;font-family:inherit;font-size:.85em;color:var(--green);
 }
 
+/* real terminal recording (asciinema) */
+.cast-wrap{
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;
+  background:#000;box-shadow:0 0 24px rgba(255,47,179,.12);
+}
+.cast-note{margin-top:.7rem;font-size:.8rem;color:var(--dim)}
+
 /* gallery */
 .gallery{display:grid;grid-template-columns:1fr;gap:1.2rem}
 @media(min-width:640px){.gallery{grid-template-columns:1fr 1fr 1fr}}
@@ -174,7 +182,7 @@ footer p{max-width:44rem;margin:.5rem auto 0}
   <div class="prompt">$ vibeworld</div>
   <h1>VIBE<span class="accent">WORLD</span></h1>
   <p class="tagline">A shared world that runs in your terminal.</p>
-  <p class="sub">Walk a neon planet of eight sciences. Meet other devs at 2am
+  <p class="sub">Walk a neon planet of nine sciences. Meet other devs at 2am
   street corners. And when your AI agent "fixes" the failing test by deleting
   it, take a rocket to the moon and scream.</p>
 
@@ -194,9 +202,6 @@ footer p{max-width:44rem;margin:.5rem auto 0}
     <p class="alt-dl">Or grab a binary from the
       <a href="https://github.com/SorBalda/vibeworld/releases/latest">latest release</a>
       (Windows: <code>vibeworld-windows-amd64.exe</code>).</p>
-    <img src="screenshots/install.gif" loading="lazy" style="margin-top:.9rem"
-         alt="The one-liner in action: curl pipes to sh, the binary downloads, the SHA256 verifies, and it says See you on the moon"
-         width="880" height="117">
   </div>
 
   <p class="small-print">One pure-Go binary · voice chat included · Linux ·
@@ -223,9 +228,6 @@ footer p{max-width:44rem;margin:.5rem auto 0}
       SHOUTING counts triple. Launch it into orbit and anyone looking up from
       anywhere on the planet reads your words next to the moon. Screams
       survive server restarts.</p>
-      <img src="screenshots/complaint-crater.gif" loading="lazy"
-           alt="Typing a scream at the Complaint Crater: the input line fills, the RAGE meter climbs, the rocket launches, and the scream tops the wall"
-           width="1200" height="736">
       <img src="screenshots/scream-from-space.png" loading="lazy"
            alt="The last scream heard from space, visible in the sky next to the moon" width="2048" height="1223">
     </div>
@@ -234,25 +236,11 @@ footer p{max-width:44rem;margin:.5rem auto 0}
       <h3>An arcade at the crossroads</h3>
       <p>Two of the Agora's monuments are lying about being monuments. THE
       GRID is a first-person neon corridor shooter where reloading runs
-      <code>git commit -am "reload"</code> and the enemies are giant
-      recognizable scientist faces — Einstein, Turing, Newton — that taunt you
-      with <em>"deadline tomorrow"</em> as they close in; GLITCH COLLECTOR is
-      firewall defense. Both multiplayer: walk in mid-wave and you join the
-      running match, score and all.</p>
+      <code>git commit -am "reload"</code>; GLITCH COLLECTOR is firewall
+      defense. Both multiplayer: walk in mid-wave and you join the running
+      match, score and all.</p>
       <img src="screenshots/arcade-multiplayer.gif" loading="lazy"
            alt="Two players in the same match: Glitch Collector, then THE GRID" width="900" height="552">
-      <img src="screenshots/grid-labels.gif" loading="lazy"
-           alt="THE GRID: a corridor shooter where the enemies are your actual backlog — one labeled PEER REVIEWED, another 8 more revisions requested — closing in fast"
-           width="640" height="323">
-    </div>
-
-    <div class="card">
-      <h3>The Stands</h3>
-      <p>Also at the Agora: the shared bulletin. Post a phrase or drop a PDF,
-      and like what resonates — the good ones stick around, liked and stacked,
-      so the crossroads keeps a memory of what the world found worth saying.</p>
-      <img src="screenshots/stands-likes.png" loading="lazy"
-           alt="The Stands: a shared bulletin of posted phrases, each with a heart-like count and author" width="1000" height="562">
     </div>
 
     <div class="card">
@@ -260,8 +248,8 @@ footer p{max-width:44rem;margin:.5rem auto 0}
       <p>Stuck on a bug at 2am? Step into a corner, hit <kbd>!</kbd>, and say
       what's wrong: a red ribbon with a countdown goes up over your junction,
       and anyone in the city can walk over. On-call for people, not pagers.</p>
-      <img src="screenshots/help-flare.gif" loading="lazy"
-           alt="A HELP beacon going up over a junction, seen by another player walking over" width="950" height="583">
+      <img src="screenshots/help-flare.png" loading="lazy"
+           alt="A HELP beacon over a junction, seen by another player" width="2048" height="1223">
     </div>
 
     <div class="card">
@@ -287,6 +275,23 @@ footer p{max-width:44rem;margin:.5rem auto 0}
   </div>
 </section>
 
+<section class="wrap" id="cast">
+  <h2>Not a video — a real terminal recording</h2>
+  <p>The GIFs above are real too, but a GIF is still a rendered video file.
+  This one is an <a href="https://asciinema.org">asciinema</a> cast: raw,
+  timestamped terminal output captured from an actual <code>vibeworld</code>
+  client talking to a real local server — walking a city corner, then the
+  signature moon-scream flow. Every byte below is what the client really
+  printed. Play it, pause it, select the text like any terminal.</p>
+  <div class="cast-wrap" style="margin-top:1.2rem">
+    <div id="vibeworld-cast"></div>
+  </div>
+  <p class="cast-note">
+    <a href="https://github.com/SorBalda/vibeworld/blob/main/docs/vibeworld-session.cast">Raw .cast file</a>
+    · 120×35 · ~30s · asciinema v2 format.
+  </p>
+</section>
+
 <section class="wrap" id="gallery">
   <h2>How it looks</h2>
   <div class="gallery">
@@ -310,6 +315,15 @@ footer p{max-width:44rem;margin:.5rem auto 0}
 
 <section class="wrap" id="faq">
   <h2>Questions you were about to ask</h2>
+
+  <details>
+    <summary>Is it open source?</summary>
+    <p>The <a href="https://github.com/SorBalda/vibeworld/tree/main/mod-sdk">Mod
+    SDK</a> is Apache-2.0 today. The client ships as free binaries, with the
+    source planned to open under PolyForm Perimeter. And
+    <code>vibeworld --offline</code> runs the whole world air-gapped on your
+    machine, no server involved.</p>
+  </details>
 
   <details>
     <summary>Is it safe to run?</summary>
@@ -390,6 +404,23 @@ footer p{max-width:44rem;margin:.5rem auto 0}
     if(navigator.clipboard&&navigator.clipboard.writeText){
       navigator.clipboard.writeText(cmd).then(done,fallback);
     }else{fallback();}
+  });
+})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/asciinema-player@3.8.2/dist/bundle/asciinema-player.min.js"></script>
+<script>
+(function(){
+  var el = document.getElementById('vibeworld-cast');
+  if (!el || typeof AsciinemaPlayer === 'undefined') return;
+  AsciinemaPlayer.create('vibeworld-session.cast', el, {
+    cols: 120,
+    rows: 35,
+    autoPlay: false,
+    preload: true,
+    theme: 'monokai',
+    poster: 'npt:0:01',
+    fit: 'width'
   });
 })();
 </script>

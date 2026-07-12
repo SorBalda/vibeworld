@@ -8,6 +8,8 @@ A neon multiplayer world that runs in your terminal — one pure-Go binary, voic
 
 ![The whole way down: space, the turning globe, a region, a city corner conversation, the Stargazer's Ledge, and the moon](docs/screenshots/journey.gif)
 
+*GIFs are rendered video. Want proof it's a real terminal? [Play the raw asciinema recording](https://sorbalda.github.io/vibeworld/#cast) — timestamped bytes, not a re-render.*
+
 > A neon planet of nine continents. Eight sciences orbit the Agora, the
 > crossroads at the center, and you walk a terminal map of your own field,
 > meeting other devs at street corners named after the people and papers you
@@ -54,11 +56,13 @@ OS/arch, verifies the SHA256, and drops a single binary in `~/.local/bin`.
 
 Platforms: Linux x64/arm64 ✓ · Apple Silicon ✓ · Windows x64 `.exe` ✓ · **Intel Mac soon**.
 
-**Updating** is the same command — it always fetches the latest release (and at
-login vibeworld shows a `▲ update available`, you can type `u` and it automatically updates).
+**Updating** is the same command — it always fetches the latest release, and at
+login vibeworld shows a `▲ update available` line with exactly what to run.
 
 The public server is built in: **`wss://vibecity-andrea.fly.dev/ws`**. It's early
-— one trial server, capped at 350 online, asleep until someone connects.
+— one trial server, capped at 350 online, asleep until someone connects. If your
+login takes a second, that's the server booting because you showed up: that's a
+feature, not a crowd, since an empty world shouldn't run up an idle cloud bill.
 
 No account needed. `vibeworld --anon` if you'd rather be nobody.
 
@@ -103,6 +107,11 @@ about. Here they're literal streets, a neon plan you *walk* junction to
 junction.
 
 ![Deep Learning city map](docs/screenshots/city-map.png)
+
+And the streets are live: everyone in the city is on the same map at the same
+moment, walking corner to corner, each under their own @handle.
+
+![Ten people walking the Deep Learning streets, live](docs/screenshots/city-crowd.gif)
 
 A corner is a room; a monument is a gathering. Press `Enter` on one and it goes
 full 3D: towers, rain of dead pixels, whoever else is standing there, a chat
@@ -247,6 +256,15 @@ Go sit in a room, watch the sky from the Ledge, or read the last scream heard
 from space. The planet, the moon, the beacons, the wall — the world itself is
 company. This isn't `--offline`; you're on the real server, some nights just
 quiet. Someone tends to wander in eventually.
+
+And "quiet" doesn't mean "nothing to do". Alone, on any given night, you can:
+walk a continent you've never visited and read street signs named after papers
+you've argued about; try the day's Oracle riddle (it's genuinely hard); honour
+a monument and leave your mark on its plaque; proclaim a finding at The Stands
+for whoever comes next; water the plant on the Ledge before it wilts; clear a
+few waves in the arcade; scream at the moon and watch your words orbit the
+planet. The multiplayer is the soul, but the world is built to be *walked* —
+if you like terminals at all, exploring it solo is the point, not the fallback.
 
 ![Terra and Luna, seen from space](docs/screenshots/space.png)
 
