@@ -6,7 +6,7 @@ A neon multiplayer world that runs in your terminal. One small download, voice c
 [![Mod SDK: Apache-2.0](https://img.shields.io/badge/Mod%20SDK-Apache--2.0-blue)](mod-sdk/)
 [![Platforms: Linux · macOS · Windows](https://img.shields.io/badge/platforms-Linux%20%C2%B7%20macOS%20%C2%B7%20Windows-informational)](#install)
 
-![The whole way down: space, the turning globe, a region, a city corner conversation, the Stargazer's Ledge, and the moon](docs/screenshots/journey.gif)
+![The whole way down: from space to the turning globe, down through a region into a city, to a HELP flare and a corner conversation](docs/screenshots/journey.gif)
 
 *GIFs are rendered video. Want proof it's a real terminal? [Play the raw asciinema recording](https://sorbalda.github.io/vibeworld/#cast) — timestamped bytes, not a re-render.*
 
