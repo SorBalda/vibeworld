@@ -1,43 +1,18 @@
 # VibeWorld
 
-A neon multiplayer world that runs in your terminal. One small download, voice chat built in, and a moon you fly to and scream at when the agent deletes your tests.
+Discord became a list of servers. Slack became work. Twitter became a feed.
+
+We built a place instead: a neon multiplayer world that runs *in your terminal*.
 
 [![Latest release](https://img.shields.io/github/v/release/SorBalda/vibeworld?label=release)](https://github.com/SorBalda/vibeworld/releases/latest)
 [![Mod SDK: Apache-2.0](https://img.shields.io/badge/Mod%20SDK-Apache--2.0-blue)](mod-sdk/)
-[![Platforms: Linux · macOS · Windows](https://img.shields.io/badge/platforms-Linux%20%C2%B7%20macOS%20%C2%B7%20Windows-informational)](#install)
+[![Platforms: Linux · macOS · Windows](https://img.shields.io/badge/platforms-Linux%20%C2%B7%20macOS%20%C2%B7%20Windows-informational)](#get-in-right-now)
 
 ![The whole way down: from space to the turning globe, down through a region into a city, to a HELP flare and a corner conversation](docs/screenshots/journey.gif)
 
-*GIFs are rendered video. Want proof it's a real terminal? [Play the raw asciinema recording](https://sorbalda.github.io/vibeworld/#cast) — timestamped bytes, not a re-render.*
+*That's a GIF, i.e. a re-render. Don't believe GIFs. [Play the raw asciinema recording](https://sorbalda.github.io/vibeworld/#cast) instead — real bytes, real timestamps, no editing.*
 
-> A neon planet of nine continents. Eight sciences orbit the Agora, the
-> crossroads at the center, and you walk a terminal map of your own field,
-> meeting other devs at street corners named after the people and papers you
-> argue about. Keep each other company at 2am while the code misbehaves. And
-> when your AI agent "fixes" the failing test by deleting it, take a rocket to
-> the moon and scream.
-
-Discord became a list of servers.\
-Slack became work.\
-Social media became feeds.
-
-**We wanted a place.**
-
-So we built one: a shared world in your terminal. Not a picture of a world — a
-real one you walk street by street, a neon planet lit like a cyberpunk city. It
-does things terminals are not supposed to do: voice chat, a pixel-art avatar
-editor with a mouse that really works, and a rocket to the moon where you type
-what your LLM did and launch the scream into orbit for the whole planet to read.
-
-You don't join it like a chat server; you show up and walk around. Come with
-friends and take a street corner, or arrive alone at 3am and watch comets from a
-ledge. Both work. Installing it just to look at it is fine too.
-
-**▶ [See it on the landing site](https://sorbalda.github.io/vibeworld/)** · **[Download a release](https://github.com/SorBalda/vibeworld/releases)**
-
-**Jump to:** [Install](#install) · [The planet](#a-planet-of-eight-sciences-and-a-crossroads) · [Cities](#cities-are-street-graphs) · [The moon](#the-moon) · [The arcade](#the-arcade-at-the-crossroads) · [Keys](#keys) · [Under the hood](#under-the-hood) · [Privacy](#privacy--safety) · [License](#license)
-
-## Install
+## Get in. Right now.
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh
@@ -46,201 +21,131 @@ vibeworld
 
 ![The one-liner in action: curl pipes to sh, the binary downloads, the SHA256 verifies, and it says "See you on the moon"](docs/screenshots/install.gif)
 
-One command, one small download — voice chat included, no extra packages to
-install.
+One command. One small binary. Voice chat already inside it. No account, no
+extra packages, nothing else to configure.
 
-**Windows:** download [`vibeworld-windows-amd64.exe`](https://github.com/SorBalda/vibeworld/releases/latest) from Releases, then run `vibeworld`.
+**Windows:** grab [`vibeworld-windows-amd64.exe`](https://github.com/SorBalda/vibeworld/releases/latest) from Releases and run it.
 
-No account needed. More on how it all works is [under the hood](#under-the-hood).
+If that made you grin, a ⭐ helps the next person find this before you scroll away.
 
-If this made you smile, a ⭐ helps the next person find it.
+## This is what you walked into
 
-## You, but honest
-
-Nobody here is "passionate about technology". When you first log in, you pick a
-field and write one honest line about yourself. It shows on your card to everyone
-you meet.
-
-![Choosing a specialization](docs/screenshots/specialization.png)
-
-Met someone you want to stay in touch with? Your card can hold a **GitHub and/or
-LinkedIn link** (press `p` to edit your profile), and anyone can press `g`/`l` to
-open them — after a two-step confirm, so no surprise clicks.
-
-Then, that first time only, you make an avatar. There's a real pixel editor:
-colors, undo, mirror mode, fill, and a 3D preview. We had to stop somewhere, so
-the canvas is 16x16 pixels.
-
-Yes, the mouse works. In the terminal. Not just in the editor — click a corner, a
-person, a button, the map. Come back later and you land straight on the globe, no
-setup again.
-
-![The avatar studio](docs/screenshots/avatar-editor.png)
-
-## A planet of eight sciences and a crossroads
-
-Log in and you float between Terra and Luna. Pick a direction and you go there.
-Each continent is a field of science — Artificial Intelligence is one landmass,
-Engineering another, eight sciences around the world. The Agora, the crossroads
-at the center, sits where they all meet. You orbit, you pick, you go down.
-
-![The globe you orbit to pick a continent, Terra and Luna hanging in space](docs/screenshots/globe.png) — *animated version on the [site](https://sorbalda.github.io/vibeworld/)*
-
-## Cities are street graphs
-
-Your field already has famous names: the people and papers everyone argues
-about. Here they are real streets, a neon map you *walk* corner to corner — and
-the streets are live: everyone in the city walks the same map at the same
-moment, each under their own @handle.
+Pick a field — AI, Bio, Physics, whatever you actually do — and you land on its
+continent: a neon city where the streets are named after the people and papers
+you argue about, and everyone else in that field is walking it *right now*,
+live, under their own @handle.
 
 ![Walking the Deep Learning streets while ten other people do the same, live](docs/screenshots/city-crowd.gif)
 
-A corner is a room; a monument is a meeting place. Press `Enter` on one and it
-goes full 3D: the monument fills the screen, whoever else is there stands at its
-base, and a chat panel keeps the talk. Walk up and you are in it.
+Press `Enter` on a monument and the screen goes full 3D. Whoever's there is
+standing at its base. Press `!` on an empty line and you perform the *rite* —
+it lights up the whole screen and the plaque remembers it forever ("performed
+12× in living memory · last by @you").
 
 ![Inside The Knuth Plaza in full 3D: a rite just performed, the shockwave still ringing, two avatars at the base](docs/screenshots/city-3d.png)
 
-Want to leave a mark that lasts? Every landmark keeps a **rite**: press `!` on an
-empty chat line inside a monument and it lights up the whole screen, and the
-plaque remembers it ("rite performed 12× in living memory · last by @you"). Chat
-at a corner comes and goes; what happens at a monument is kept.
+You get a face too. Real pixel editor, mouse and all — colors, undo, mirror,
+fill, a spinning 3D preview. 16x16 pixels, because we had to stop somewhere.
 
-## The Ten Commandments of Science
+![The avatar studio](docs/screenshots/avatar-editor.png)
 
-In the Agora stands the Tablet of the **Ten Commandments of Science** ("Your
-agent 'fixed' the test. It is gone."):
+Yes, the mouse works. In a terminal. Click a corner, a person, a button, the
+map — all of it.
+
+## Found your own corner
+
+Don't like what's on the map? Make your own. Press `C`, then `n`, aim with the
+mouse, click — a corner appears with your name on it, forever, or until you
+tear it down yourself.
+
+![Founding a corner with the mouse: the ghost marker glides across the map with the live "found your corner here" hint, one click, a name typed — and the corner stands there with your handle on it](docs/screenshots/corner-placement.gif)
+
+Found one out past the edge of the map and the city notices — it grows,
+threading brand-new streets out to meet you. The map remembers you were here.
+
+![A corner founded on the far edge: fresh green streets now reach out to it, named after its founder](docs/screenshots/corner-edge-growth.png)
+
+Nobody visits yours in 30 days, it crumbles. Use it or lose it.
+
+## Take the rocket. Scream.
+
+Your agent "fixed" the failing test by deleting it. Fine. Take the rocket to
+Luna and unload at the **Complaint Crater**. Type it out, watch the RAGE meter
+climb — ALL CAPS counts triple, a row of "!!!" counts six times — then launch.
+Your scream goes up on the wall for the *entire planet* to read, and it stays
+there even after the server restarts.
+
+![Typing a scream at the Complaint Crater: "MY AGENT DELETED THE FAILING TEST. THE TEST WAS THE FEATURE???", the RAGE meter climbing, the rocket launching](docs/screenshots/complaint-crater.gif)
+
+Screaming into the void, except the void has a player count.
+
+## Then go be quiet for a while
+
+Moon's got more than a scream booth. At the **Stargazer's Ledge** you sit with
+whoever's there and watch the sky do things: comets, auroras, a supernova, the
+odd space battle, occasionally something that is *no moon*. Eleven kinds of
+event, never the same night twice. `ctrl+n` for lo-fi Beethoven at a gentle
+volume, on the actual moon.
+
+![Watching the sky together from the Stargazer's Ledge](docs/screenshots/stargazing.gif)
+
+There's also a plant. One plant, shared by the whole moon, sitting on the
+Ledge. Water it (`!`) and it grows. Ignore it for two days and it dies — really
+dies, back to a seed — and nobody brings it back but you.
+
+![The moon plant withered to a bare stalk: "watered by @Andrea · withered · water to revive"](docs/screenshots/plant-dying.png)
+
+The **Contemplation Dome** next door is music only. No voice, no chat, no
+noise. Some places should just stay quiet.
+
+## Paint the wall
+
+**The Regolith Wall.** A shared pixel canvas on the moon, and there's exactly
+one — everybody who ever visits paints on the same mural. Brush, pen, colors,
+eraser, the works.
+
+![Painting The Regolith Wall: a colorful mural mid-progress, brush size and color picker at the bottom](docs/screenshots/graffiti-wall.png)
+
+Zoom back out to the moon overview and there it is — your mural, shrunk down
+to a little glowing picture on the side of the building. Visible from orbit.
+The whole planet's graffiti, permanent, from space.
+
+![The moon overview: The Regolith Wall building shows the shared mural as a small thumbnail, visible from orbit](docs/screenshots/moon-mural-thumb.png)
+
+## The rest of it
+
+**Ten Commandments of Science**, carved in stone at the Agora crossroads
+("Your agent 'fixed' the test. It is gone."). Everyone breaks at least three a
+week. That's why they're carved in stone.
 
 ![The Tablet of the Ten Commandments, in the Agora](docs/screenshots/agora-tablets.png)
 
-They are carved at the crossroads because everyone walks past them on the way to
-their own continent. You have broken at least three this week. Nobody follows
-them. That is why they are carved in stone.
+**HELP flares.** Stuck at 2am? Press `!` in a corner, say what's wrong, and a
+red countdown ribbon goes up over your head. Anyone in the city can walk over.
+Help from people, not a ticket queue.
 
-## The Stands
+![A HELP beacon, seen by another player](docs/screenshots/help-flare.png)
 
-Also at the Agora: **The Stands**, a shared board. Post a line or drop a PDF, and
-like what speaks to you. The best ones stay, liked and stacked, so the crossroads
-remembers what people found worth saying.
-
-![The Stands — post a phrase or share a PDF, and like what resonates](docs/screenshots/stands-likes.png)
-
-## The HELP flare
-
-Stuck on a bug at 2am? Step into a corner, press `!`, and say what is wrong: a red
-ribbon with a countdown goes up over your corner, and anyone in the city can walk
-over. Help from people, not from a ticket queue.
-
-![A HELP beacon, seen by another player](docs/screenshots/help-flare.png) — *animated version on the [site](https://sorbalda.github.io/vibeworld/)*
-
-## The moon
-
-Some nights you need to scream. Some nights you need the sky. Take the rocket
-to Luna, the thoughtful moon: it gives you both, and they are opposites.
-
-**Screaming.** At the **Complaint Crater** there is a booth. You type what your
-LLM did to you this time; the RAGE meter fills as you write, and it has opinions —
-SHOUTING counts triple, a row of "???" counts six times, so real anger fills the
-meter long before a calm paragraph would. Then you launch your rant into orbit:
-it goes up on the wall under `▼ LAST SCREAM HEARD FROM SPACE`, and *everyone sees
-it* — anyone looking up from anywhere on the planet gets your words by the moon,
-and they stay even after a server restart. Screaming into the void, except the
-void has a player count.
-
-![Typing a scream at the Complaint Crater: the input line fills with "MY AGENT DELETED THE FAILING TEST. THE TEST WAS THE FEATURE???", the RAGE meter climbs, the rocket launches, and the scream tops the wall](docs/screenshots/complaint-crater.gif)
-
-**Stargazing.** The moon also has quiet places. At the **Stargazer's Ledge** you
-sit with whoever is there and watch the sky put on its own show: comets, auroras,
-a supernova, the Earth passing overhead, the odd space battle, and now and then
-something that is *no moon*. Eleven kinds of event, mixed so no two nights look
-the same, and shared with everyone at the Ledge. Press `ctrl+n` for lo-fi
-classical (Beethoven, at a gentle volume, on the actual moon). The
-**Contemplation Dome** next door is music only: no voice, no noise. Some places
-should stay that way.
-
-![Watching the sky together from the Stargazer's Ledge](docs/screenshots/stargazing.png) — *animated version on the [site](https://sorbalda.github.io/vibeworld/)*
-
-## The people
-
-Some things are easier to type. Corner chat, city chat, DMs that carry images and
-PDFs, profiles, block and report, and slash emotes:
-
-![Two players trading emotes: an /explode and a /kiss](docs/screenshots/kiss.png)
-
-`/kiss`. Pixel hearts. `*mhua*`. `/explode` for when the build does. No
-microtransactions were involved. (There's a whole set: `/punch`, `/jump`,
-`/rocket`, `/explode`, `/dance`, `/facepalm`, `/highfive`, `/coffee`, `/d20`.)
-
-Want to know if your friends are on? Press `]`: the social column shows them
-live, with a `●` when they are online and where they are, so you know whether to
-walk over or take the rocket up. Friend requests cross time zones — send one to
-someone offline and it arrives at their next login, and requests coming *your*
-way wait in a `⇄ REQUESTS` row you accept or decline there.
-
-Finding one person in a nine-continent world should be easy. The same column also
-has **People**: everyone online right now, and where. Search by handle, GitHub
-login, or field, then open a profile, DM, or add them from the list.
-
-## Voice, with zero installs
-
-Some arguments are faster out loud. Press `ctrl+V` and you are talking; press it
-again to stop. The first press is your mic consent; until then you only listen,
-and when your mic is live the status line turns **red** and reads `ON AIR`, so you
-always know when the world can hear you. No extra audio software — it is all in
-the one download.
-
-![ON AIR at the Ledge](docs/screenshots/voice-on-air.png)
-
-(That object in the sky showed up on its own during the screenshot. We kept it.
-You would have too.)
-
-## The arcade at the crossroads
-
-Sometimes the fix is shooting something. Two of the Agora's monuments are not
-really monuments. Step into **The Arena** and you are in **THE GRID**: a
-first-person neon corridor shooter where the gun is the git blame cannon, one
-magazine is 24 commits, reloading runs `git commit -am "reload"`, and the wave 5
-boss is THE AGENT THAT DELETED YOUR TESTS. Step into **The Pulvinar** for
-**GLITCH COLLECTOR**: hold the firewall and squash the glitches before they eat
-through it. The other two are honest — **The Furnace** prints a receipt for
-whatever you burn, and **The Crowd**'s ROAR meter barely moves for one voice,
-then maxes out for a full house.
-
-The point: **the games are multiplayer.** Walk in while someone is already
-playing and you don't watch — you *join the running match*, mid-wave, score and
-all. The others stand in the game with their own avatars and @handles — pixel
-busts on the Glitch field, full 3D billboards in the corridors of THE GRID. A
-CREW row keeps the count, and whoever started the match holds the restart key;
-press `R` as a guest and the game tells you whose match you walked into.
+**The arcade at the Agora is multiplayer**, not decoration. Walk in
+mid-match and you don't watch — you join the running game, score and all,
+your avatar standing in the field with the rest of the crew.
 
 ![Two players in the same Glitch Collector match, crew tally and score climbing](docs/screenshots/arcade-multiplayer.gif)
 
-No quarters. The cabinet at the center of the world runs on karma.
+In THE GRID the enemies are literally labeled "PEER REVIEWED" and "8 more
+revisions requested."
 
-![THE GRID: a corridor shooter where the enemies are your actual backlog — one labeled "PEER REVIEWED", another "8 more revisions requested" — closing in fast](docs/screenshots/grid-labels.gif)
+![THE GRID: a corridor shooter where the enemies are your actual backlog, closing in fast](docs/screenshots/grid-labels.gif)
 
-## Fine on your own, too
+**Voice, zero installs.** `ctrl+V` and you're talking; the status line turns
+red and says `ON AIR` so nobody's ever surprised. `/kiss`, `/explode`,
+`/rocket`, `/d20` and friends for everything else.
 
-It's 3am and nobody you know is awake. That's fine. Leave VibeWorld open on a
-second monitor while you work — it uses very little memory (see
-[under the hood](#under-the-hood)). It is not asking for your attention; it just
-sits there, like any open window.
+![ON AIR at the Ledge](docs/screenshots/voice-on-air.png)
 
-![Working on the main screen, VibeWorld alive on the second](docs/screenshots/second-monitor.svg)
-
-Go sit in a room, watch the sky from the Ledge, or read the last scream heard
-from space. The planet, the moon, the beacons, the wall — the world itself is
-company. This is not an offline mode; you are on the real server, just quiet some
-nights. Someone usually wanders in.
-
-And "quiet" doesn't mean "nothing to do". Alone, on any given night, you can:
-walk a continent you've never visited and read street signs named after papers
-you've argued about; try the day's Oracle riddle (it's genuinely hard); honour
-a monument and leave your mark on its plaque; proclaim a finding at The Stands
-for whoever comes next; water the plant on the Ledge before it wilts; clear a
-few waves in the arcade; scream at the moon and watch your words orbit the
-planet. The multiplayer is the soul, but the world is built to be *walked* —
-if you like terminals at all, exploring it solo is the point, not the fallback.
+**Alone at 3am is fine too.** Leave it running on a second monitor. It uses
+about as much memory as a browser tab and it's not asking for your attention —
+it's just there, like company usually is.
 
 ![Terra and Luna, seen from space](docs/screenshots/space.png)
 
@@ -249,76 +154,64 @@ if you like terminals at all, exploring it solo is the point, not the fallback.
 | Key | Does |
 |-----|------|
 | `←↑↓→` / `hjkl` | walk the streets · orbit the planet |
-| mouse | click anything: corners, people, buttons, the map. works everywhere |
+| mouse | click anything: corners, people, buttons, the map |
 | `Tab` | cycle worlds, regions, cities, chat tabs |
 | `Enter` | descend · enter a corner or monument · send chat |
 | `Esc` | back out, all the way to space |
 | `c` | chat in the city |
-| `m` | cycle monuments |
-| `!` | raise a HELP flare (in a corner) · perform the rite (at a monument) |
+| `C` | corners directory · found your own |
+| `m` | jump to the monument · cycle them in the Agora |
+| `!` | HELP flare (corner) · perform the rite (monument) · water the plant (moon) |
 | `/kiss` `/punch` `/rocket` … | emotes, typed in chat |
 | `ctrl+V` | voice: press to talk, press again to stop |
 | `ctrl+n` | lo-fi classical, on the moon |
 | `]` | social column: friends, live presence, requests, People, DMs |
 | `p` | edit your own profile (bio, GitHub/LinkedIn links) |
-| `:` | command console (`/profile` · `/logout` · `/quit`) |
+| `:` | command console |
 | `?` | every key, in-world |
-| `q` / `ctrl+C` | quit (the HELP flare, sadly, only works in-world) |
 
 ## House rules
 
-- **No recording voice chat.** People talk because it is not saved.
-- **The Contemplation Dome is a sanctuary.** Music only. Take the argument to the
-  Complaint Crater, that's what it's for.
+- **No recording voice chat.** People talk because it isn't saved.
+- **The Contemplation Dome is a sanctuary.** Take the argument to the Crater.
 - Block and report exist and work. Be someone worth stargazing with.
+
+---
 
 ## Under the hood
 
 A few notes, for anyone who wants them.
 
-**One binary.** VibeWorld is a single pure-Go binary — no browser, no Electron,
-no extra packages. The audio codec ships inside it, so voice chat needs no
-PortAudio, no Opus package, nothing else installed.
+**One binary.** Pure Go, no browser, no Electron. Voice's audio codec is
+built in — no PortAudio, no Opus package, nothing else to install.
 
-**Install & updates:** the script picks the right build for your OS and
-processor, verifies the SHA256, and drops one file in `~/.local/bin`. Updating is
-the same command — it always fetches the latest release, and at login VibeWorld
-shows a `▲ update available` line with what to run.
+**Install & updates:** the script detects your OS/arch, verifies the SHA256,
+drops one file in `~/.local/bin`. Same command updates it; VibeWorld itself
+tells you when a new build is out.
 
-**Platforms:** Linux x64/arm64 · Apple Silicon · Windows x64 `.exe` · **Intel Mac
-soon**.
+**Platforms:** Linux x64 · Apple Silicon · Windows x64 `.exe` · Intel Mac and
+Linux arm64 soon.
 
-**Server:** built in at **`wss://vibecity-andrea.fly.dev/ws`**. It is early — one
-trial server, capped at 350 people, that sleeps until someone connects, so a slow
-login is just the server waking up.
+**Server:** built in at `wss://vibecity-andrea.fly.dev/ws`. One trial server,
+capped at 350 people, sleeps until someone connects — a slow login just means
+it's waking up.
 
-**Also:** about 30 MB of RAM (less than a browser tab). `vibeworld --anon` to
-stay nobody; `vibeworld --offline` for a full world on your own machine, with
-nothing sent out.
+**Also:** ~30 MB of RAM. `vibeworld --anon` to stay nobody. `vibeworld
+--offline` for a full solo world on your own machine, nothing sent anywhere.
 
-## Privacy & safety
+**Privacy:** your connection is TLS (`wss://`). Every handle, message, bio,
+and complaint that reaches your terminal is stripped of control/escape
+sequences before it's shown, so nobody can hijack your terminal through a chat
+line. There's no end-to-end encryption — the server can see what passes
+through it, so don't send anything you'd mind an operator reading. Voice
+isn't recorded. Block and report work.
 
-Plain facts, no marketing. Your connection is encrypted (TLS, `wss://`). Every
-handle, message, bio, filename, HELP line, and complaint that reaches your
-terminal is cleaned of control and escape sequences before it is shown, so a
-hostile user or server cannot take over your terminal through a chat line
-(`internal/textsafe`, on both ends). What we *don't* do: there is no end-to-end
-encryption. The server passes on your text, DMs, files, and voice, and can see
-all of it, so don't send anything you would mind a server operator reading. Voice
-is not recorded either. Block and report exist and work.
+**Modding:** starts at [`mod-sdk/`](mod-sdk/) (Apache-2.0) — worldpacks are
+data, not code.
 
-## For developers
-
-Modding starts at [`mod-sdk/`](mod-sdk/) (Apache-2.0): worldpacks are data, not
-code.
-
-## License
-
-VibeWorld ships as **free binaries**. The **Mod SDK** ([`mod-sdk/`](mod-sdk/))
-is **Apache-2.0**; the client source is planned to open under **PolyForm
-Perimeter**.
-
-Full text: [`LICENSE`](LICENSE). The name is reserved: [`TRADEMARK.md`](TRADEMARK.md).
+**License:** free binaries. The Mod SDK is Apache-2.0; client source is
+planned to open under PolyForm Perimeter. Full text: [`LICENSE`](LICENSE).
+Name reserved: [`TRADEMARK.md`](TRADEMARK.md).
 
 ---
 
