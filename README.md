@@ -52,6 +52,14 @@ fill, a spinning 3D preview. 16x16 pixels, because we had to stop somewhere.
 Yes, the mouse works. In a terminal. Click a corner, a person, a button, the
 map — all of it.
 
+And when the street feels small: press `Tab`. `#city` is whoever shares your
+streets; `#world` is *everyone awake, everywhere* — one channel for the whole
+world, reachable from any room, any screen, the moon, even drifting in space.
+Every line says where it came from (`·deep-learning`, `·moon`). It never
+chimes, never pings you — a murmur you visit, not a noise that finds you.
+
+![A #world message arriving in a street corner, origin tag and all](docs/screenshots/world-chat.png)
+
 ## Found your own corner
 
 Don't like what's on the map? Make your own. Press `C`, then `n`, aim with the
@@ -95,8 +103,9 @@ dies, back to a seed — and nobody brings it back but you.
 
 ![The moon plant withered to a bare stalk: "watered by @Andrea · withered · water to revive"](docs/screenshots/plant-dying.png)
 
-The **Contemplation Dome** next door is music only. No voice, no chat, no
-noise. Some places should just stay quiet.
+The **Contemplation Dome** next door is music only. No voice, no local
+chatter, no noise. The one thing that reaches it is `#world` — even the quiet
+room can hear the whole planet murmur, softly, if it asks.
 
 ## Paint the wall
 
