@@ -1,8 +1,10 @@
 # VibeWorld
 
-Discord became a list of servers. Slack became work. Twitter became a feed.
+**A persistent multiplayer world living entirely in your terminal. Explore,
+meet developers, discover communities and help people in real time.**
 
-We built a place instead: a neon multiplayer world that runs *in your terminal*.
+Discord became a list of servers. Slack became work. Twitter became a feed.
+We built a place instead.
 
 [![Latest release](https://img.shields.io/github/v/release/SorBalda/vibeworld?label=release)](https://github.com/SorBalda/vibeworld/releases/latest)
 [![Mod SDK: Apache-2.0](https://img.shields.io/badge/Mod%20SDK-Apache--2.0-blue)](mod-sdk/)
@@ -21,12 +23,39 @@ vibeworld
 
 ![The one-liner in action: curl pipes to sh, the binary downloads, the SHA256 verifies, and it says "See you on the moon"](docs/screenshots/install.gif)
 
-One command. One small binary. Voice chat already inside it. No account, no
-extra packages, nothing else to configure.
+One command. One small binary. Voice chat already inside it. No email, no
+third-party sign-in, no extra packages. On first launch you create a durable
+local VibeWorld account. A GitHub link is only an optional field on your public
+profile.
 
 **Windows:** grab [`vibeworld-windows-amd64.exe`](https://github.com/SorBalda/vibeworld/releases/latest) from Releases and run it.
 
 If that made you grin, a ⭐ helps the next person find this before you scroll away.
+
+## Built in public — the record
+
+VibeWorld's origin is documented in public, timestamped artifacts:
+
+- **2026-06-30 — original implementation history.** The private development
+  history begins with an already-running multiplayer terminal world. This date
+  is stated for completeness; the independently verifiable public record starts
+  below.
+- **2026-07-03 — first public repository and first public release.** The GitHub
+  repository was created at
+  [20:57 UTC](https://api.github.com/repos/SorBalda/vibeworld), and
+  [v0.1.0 was published at 23:03 UTC](https://github.com/SorBalda/vibeworld/releases/tag/v0.1.0).
+- **2026-07-12 — first archived public announcement.**
+  [“VibeWorld: a shared world that runs in your terminal”](https://github.com/charmbracelet/bubbletea/discussions/1732)
+  was posted to the Bubble Tea community.
+
+When v0.1.0 went public, I was not aware of another product combining this
+concept, name and a persistent multiplayer world in the terminal. Projects with
+overlapping ideas and commercial offerings appeared later. I welcome honest
+competition, but I will not let the chronology disappear: **VibeWorld was
+conceived and shipped independently, and this public record predates those
+later launches.** This is a claim about documented dates and independent origin,
+not a claim that broad ideas such as terminal games or multiplayer worlds can
+belong to one person.
 
 ## This is what you walked into
 
@@ -205,8 +234,8 @@ Linux arm64 soon.
 capped at 350 people, sleeps until someone connects — a slow login just means
 it's waking up.
 
-**Also:** ~30 MB of RAM. `vibeworld --anon` to stay nobody. `vibeworld
---offline` for a full solo world on your own machine, nothing sent anywhere.
+**Also:** ~30 MB of RAM. `vibeworld --offline` runs a full solo world on your
+own machine, with nothing sent anywhere.
 
 **Privacy:** your connection is TLS (`wss://`). Every handle, message, bio,
 and complaint that reaches your terminal is stripped of control/escape
