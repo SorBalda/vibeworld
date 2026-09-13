@@ -13,8 +13,8 @@ We built a place instead.
 ![The whole way down: from space to the turning globe, down through a region into a city, to a HELP flare and a corner conversation](docs/screenshots/journey.gif)
 
 *That's a GIF, i.e. a re-render. Don't believe GIFs. [Play the raw asciinema recording](https://sorbalda.github.io/vibeworld/#cast) instead — real bytes, real timestamps, no editing.*
-
-## Get in. Right now. You can work and have vibeworld open on a second monitor in the stargazing ledge, watching the stars and whatever happens in the sky. If someone else is doing the same, you see it and you can speak with him!
+You can work and have vibeworld open on a second monitor in the stargazing ledge, watching the stars and whatever happens in the sky. If someone else is doing the same, you see it and you can speak with him!
+## Get in. Right now. 
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh
