@@ -12,7 +12,7 @@ We built a place instead.
 
 ![The whole way down: from space to the turning globe, down through a region into a city, to a HELP flare and a corner conversation](docs/screenshots/journey.gif)
 
-*That's a GIF, i.e. a re-render. Don't believe GIFs. [Play the raw asciinema recording](https://sorbalda.github.io/vibeworld/#cast) instead — real bytes, real timestamps, no editing.*
+*That's a GIF, i.e. a re-render. [Play the raw asciinema recording](https://sorbalda.github.io/vibeworld/#cast) instead — real bytes, real timestamps, no editing.*
 
 ## Get in. Right now. 
 Linux and MacOs:
