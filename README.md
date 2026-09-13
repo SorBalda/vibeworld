@@ -14,7 +14,7 @@ We built a place instead.
 
 *That's a GIF, i.e. a re-render. Don't believe GIFs. [Play the raw asciinema recording](https://sorbalda.github.io/vibeworld/#cast) instead — real bytes, real timestamps, no editing.*
 
-## Get in. Right now.
+## Get in. Right now. You can work and have vibeworld open on a second monitor in the stargazing ledge, watching the stars and whatever happens in the sky. If someone else is doing the same, you see it and you can speak with him!
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh
