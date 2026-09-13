@@ -14,9 +14,8 @@ We built a place instead.
 
 *That's a GIF, i.e. a re-render. Don't believe GIFs. [Play the raw asciinema recording](https://sorbalda.github.io/vibeworld/#cast) instead — real bytes, real timestamps, no editing.*
 
-You can work and have vibeworld open on a second monitor in the stargazing ledge, watching the stars and whatever happens in the sky. If someone else is doing the same, you see it and you can speak with him!
 ## Get in. Right now. 
-
+Linux and MacOs:
 ```sh
 curl -fsSL https://raw.githubusercontent.com/SorBalda/vibeworld/main/install.sh | sh
 vibeworld
@@ -30,6 +29,9 @@ local VibeWorld account. A GitHub link is only an optional field on your public
 profile.
 
 **Windows:** grab [`vibeworld-windows-amd64.exe`](https://github.com/SorBalda/vibeworld/releases/latest) from Releases and run it.
+
+
+You can work and have vibeworld open on a second monitor in the stargazing ledge, watching the stars and whatever happens in the sky. If someone else is doing the same, you see it and you can speak with him!
 
 If that made you grin, a ⭐ helps the next person find this before you scroll away.
 
