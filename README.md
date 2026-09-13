@@ -1,6 +1,6 @@
 # VibeWorld
 
-**A persistent multiplayer world living entirely in your terminal. Explore,
+**A persistent, cyberpunk multiplayer world living entirely in your terminal. Explore,
 meet developers, discover communities and help people in real time.**
 
 Discord became a list of servers. Slack became work. Twitter became a feed.
