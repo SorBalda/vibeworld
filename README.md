@@ -50,8 +50,7 @@ VibeWorld's origin is documented in public, timestamped artifacts:
   [“VibeWorld: a shared world that runs in your terminal”](https://github.com/charmbracelet/bubbletea/discussions/1732)
   was posted to the Bubble Tea community.
 
-When v0.1.0 went public, there was any another product combining this
-concept. Projects with
+When v0.1.0 went public, there were no other products combining this concept. Projects with
 overlapping ideas and commercial offerings appeared later (like vibeworld.build). I welcome honest
 competition, but I will not let the chronology disappear: **VibeWorld was
 conceived and shipped independently, and this public record predates those
