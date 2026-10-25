@@ -3,6 +3,9 @@
 **A persistent, cyberpunk multiplayer world living entirely in your terminal. Explore,
 meet developers, discover communities and help people in real time.**
 
+**[Play in your browser →](https://vibeworld.fly.dev/)** — the same terminal app, no installation.
+Browser profiles stay saved between visits. Use the native app for audio and local-file uploads.
+
 Discord became a list of servers. Slack became work. Twitter became a feed.
 We built a place instead.
 
